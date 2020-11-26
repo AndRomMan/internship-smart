@@ -1,0 +1,99 @@
+body {
+  background-color: $background_light;
+}
+
+
+a[href] {
+  &:hover {
+    position: relative;
+
+    outline: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: $underline_tablet_shift;
+      left: 0;
+
+      width: 100%;
+      height: $underline_height;
+
+      background-color: $outline_color;
+
+      @media (max-width: $tablet_breakpoint) {
+        top: $underline_mobile_shift;
+      }
+    }
+  }
+
+
+  &:focus {
+    position: relative;
+
+    outline: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: $underline_tablet_shift;
+      left: 0;
+
+      width: 100%;
+      height: $underline_height;
+
+      background-color: $outline_color;
+
+      @media (max-width: $tablet_breakpoint) {
+        top: $underline_mobile_shift;
+      }
+    }
+  }
+
+
+  &:active {
+    outline: none;
+    opacity: 0.7;
+  }
+}
+
+a[class="button"] {
+  position: static;
+
+  &::after {
+    display: none;
+  }
+
+  &:hover {
+    outline: $underline_height solid $outline_color;
+  }
+
+
+  &:focus {
+    outline: $underline_height solid $outline_color;
+  }
+
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+input {
+  &:hover {
+    outline: $underline_height solid $outline_color;
+  }
+
+
+  &:focus {
+    outline: $underline_height solid $outline_color;
+  }
+
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+label[for="useragreement"] {
+  cursor: pointer;
+}
