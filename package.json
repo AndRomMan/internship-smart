@@ -2,11 +2,14 @@
   "name": "smart_device",
   "version": "1.0.0",
   "private": true,
-  "description": "Личный проект HTML academy skills»",
+  "description": "Личный проект Smart Device»",
   "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/preset-env": "^7.12.7",
+    "@babel/runtime-corejs3": "^7.12.5",
     "@htmlacademy/editorconfig-cli": "1.x",
     "browser-sync": "^2.26.x",
-    "core-js": "^3.7.0",
+    "core-js": "^3.8.0",
     "del": "^5.1.x",
     "eslint": "^7.9.x",
     "eslint-config-htmlacademy": "^0.6.x",
@@ -26,8 +29,10 @@
     "gulp-svgmin": "^3.0.x",
     "gulp-svgstore": "^7.0.x",
     "htmlhint": "^0.14.x",
+    "imagemin-pngquant": "^9.0.1",
     "imagemin-webp": "^6.0.x",
     "prettier": "^2.1.x",
+    "regenerator-runtime": "^0.13.7",
     "stylelint": "^13.7.x",
     "stylelint-config-htmlacademy": "^0.1.x",
     "stylelint-config-prettier": "^8.0.x",
@@ -47,9 +52,8 @@
     "delNpmModules": "rimraf node_modules"
   },
   "browserslist": [
-    "last 2 versions",
-    "IE 11",
-    "Firefox ESR"
+    "defaults",
+    "IE 11"
   ],
   "editorconfig-cli": [
     "*.json",

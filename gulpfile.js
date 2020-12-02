@@ -1,9 +1,25 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
+
+// v1.1 полный функционал
+// + адаптация под проект
+
+// скрипты дополнительной обработки img находятся в файле gulpfile_img_treating.js
+
 // команды запуска npm-plugins для тестирования
 // npx htmlhint source/**/*.html
 // npx eslint source/**/*.js
 // npx eslint --fix source/js/*.js
 // npx stylelint source/**/*.scss
 // npx stylelint build/**/*.css
+// npx babel source/js/*.js -o script-compiled.js
+// npx babel source/js/*.js src -d build/js
+
+// gulpfile_accelerator.js для серии проектов htmlacademy-accelerator:
+// 1) отключено сжатие js и html
+// 2) добавлено сжатие pngQuant
+// 3) после тестирования отключено сжатие png в compressJpgPng
+// 4) добавлен babel
 
 'use strict';
 // подключаем Gulp
@@ -22,7 +38,7 @@ const sourcemap = require('gulp-sourcemaps');
 
 // ========== javascript producing module ==========
 // const terser = require('gulp-terser');
-// const babel = require('gulp-babel');
+const babel = require('gulp-babel');
 
 // ========= css producing module =========
 const sass = require('gulp-sass');
@@ -37,14 +53,17 @@ const autoprefixer = require('gulp-autoprefixer');
 
 // ========= html producing module =========
 const fileinclude = require('gulp-file-include');
+// const htmlmin = require('gulp-html-minifier-terser');
 
 // ========= img producing module =========
 // gulp-imagemin включает плагины:
 // mozjpeg
 // svgo
 // optipng - сжимает PNG без потерь
+// pngquant - сжимает PNG с потерями
 
 const imagemin = require('gulp-imagemin');
+const imageminPngQuant = require('imagemin-pngquant');
 
 // imagemin-webp не устанавливает расширение "webp" - следует переименовать файл
 const imageminWebp = require('imagemin-webp');
@@ -76,7 +95,7 @@ const path = {
   },
   img: {
     sourceFolder: source + 'img/',
-    source: source + 'img/*.{jpg,png,svg}',
+    // source: source + 'img/*.{jpg,png,svg}',
     sourceWebp: source + 'img/*.{jpg,png}',
     watch: source + 'img/**/*.{jpg,jpeg,png,svg}',
     compressedFolder: source + 'img/compressed/',
@@ -126,24 +145,34 @@ function browserSync() {
     cors: true,
     ui: false,
     browser: ['chrome'],
-    // browser: ["chrome", "firefox"]
     // browser: ["firefox"]
+    // browser: ["chrome", "firefox"]
   });
 }
 
 // ========== javascript producing module ==========
 function getJS() {
-  return src(path.script.source)
-    .pipe(plumber())
-    .pipe(sourcemap.init())
-    // .pipe(
-    //   babel({
-    //     presets: ['@babel/preset-env'],
-    //   })
-    // )
-    .pipe(sourcemap.write('.'))
-    .pipe(dest(path.script.build))
-    .pipe(browsersync.stream());
+  return (
+    src(path.script.source)
+      .pipe(plumber())
+      .pipe(sourcemap.init())
+      .pipe(
+        babel({
+          presets: ['@babel/preset-env'],
+        })
+      )
+      // .pipe(
+      // terser({
+      // ecma: 2015,
+      // ecma: 5,
+      // ecma: 2015, // specify one of: 5, 2015, 2016, etc.
+      // })
+      // )
+      // .pipe(rename({suffix: '.min'}))
+      .pipe(sourcemap.write('.'))
+      .pipe(dest(path.script.build))
+      .pipe(browsersync.stream())
+  );
 }
 
 // ========= css producing module =========
@@ -167,15 +196,24 @@ function getCSS() {
 }
 
 function getHTML() {
-  return src(path.html.source)
-    .pipe(plumber())
-    .pipe(
-      fileinclude({
-        prefix: '@@',
-      })
-    )
-    .pipe(dest(path.html.build))
-    .pipe(browsersync.stream());
+  return (
+    src(path.html.source)
+      .pipe(plumber())
+      .pipe(
+        fileinclude({
+          prefix: '@@',
+        })
+      )
+      // .pipe(
+      //   htmlmin({
+      //     collapseWhitespace: true,
+      //     collapseInlineTagWhitespace: true,
+      //     removeComments: true,
+      //   })
+      // )
+      .pipe(dest(path.html.build))
+      .pipe(browsersync.stream())
+  );
 }
 
 function watchFiles() {
@@ -273,7 +311,7 @@ function compressSvg() {
 }
 
 function compressJpgPng() {
-  return src(path.img.source)
+  return src(path.img.sourceFolder + '*.jpg')
     .pipe(plumber())
     .pipe(
       imagemin([
@@ -281,7 +319,7 @@ function compressJpgPng() {
           quality: 70,
           progressive: true,
         }),
-        imagemin.optipng({optimizationLevel: 3}),
+        // imagemin.optipng({optimizationLevel: 3}),
         // imagemin.svgo({
         //   plugins: [{removeViewBox: false},
         //     {cleanupIDs: false}],
@@ -290,6 +328,22 @@ function compressJpgPng() {
     )
     .pipe(gulp.dest(path.img.compressedFolder));
 }
+
+function compressPngQuant() {
+  return src(path.img.sourceFolder + '*.png')
+    .pipe(plumber())
+    .pipe(
+      imagemin([
+        imageminPngQuant({
+          quality: [0.7, 0.75],
+          speed: 6,
+          strip: true,
+        }),
+      ])
+    )
+    .pipe(gulp.dest(path.img.compressedFolder));
+}
+// exports.compressPngQuant = compressPngQuant;
 
 // ========= erase module =========
 function eraseCompressedImg() {
@@ -354,12 +408,15 @@ function copyFaviconToBuild() {
 // exports.compressFavicon = compressFavicon;
 // exports.eraseFavicon = eraseFavicon;
 
-let getFavicon = gulp.series(eraseFavicon, compressFavicon, copyFaviconManifest, copyFaviconToBuild);
-exports.getFavicon = getFavicon;
+let createFavicon = gulp.series(eraseFavicon, compressFavicon, copyFaviconManifest, copyFaviconToBuild);
+exports.createFavicon = createFavicon;
+
+let getFaviconToBuild = gulp.series(createFavicon, copyFaviconToBuild);
+exports.getFaviconToBuild = getFaviconToBuild;
 
 // ========= copy module =========
 function copyImgToBuild() {
-  return src(path.img.compressedFolder + '/*.{jpg,png,svg,webp}').pipe(dest(path.img.build));
+  return src(path.img.compressedFolder + '*.{jpg,png,svg,webp}').pipe(dest(path.img.build));
 }
 
 function copyFontToBuild() {
@@ -367,6 +424,9 @@ function copyFontToBuild() {
 }
 
 // ========= build module =========
+let getPng = gulp.series(eraseCompressedImg, compressJpgPng, compressPngQuant);
+// exports.getPng = getPng;
+
 let getSvgSprite = gulp.series(eraseSpriteSvg, compressSvgForSprite, createSvgSprite);
 
 let getImg = gulp.series(
@@ -374,6 +434,7 @@ let getImg = gulp.series(
   renameJpegToJpg,
   compressSvg,
   compressJpgPng,
+  compressPngQuant,
   convertImgToWebp,
   getSvgSprite,
   copyImgToBuild
@@ -382,12 +443,12 @@ let getImg = gulp.series(
 let startServer = gulp.parallel(watchFiles, browserSync);
 let getWorkFiles = gulp.series(getCSS, getJS, getHTML);
 let workStart = gulp.series(getWorkFiles, startServer);
-let buildProject = gulp.series(eraseBuild, getImg, getWorkFiles, getFavicon, copyFontToBuild, eraseMap);
-let buildAndStart = gulp.series(eraseBuild, getImg, getWorkFiles, getFavicon, copyFontToBuild, startServer);
+let buildProject = gulp.series(eraseBuild, getImg, getWorkFiles, getFaviconToBuild, copyFontToBuild, eraseMap);
+let buildAndStart = gulp.series(eraseBuild, getImg, getWorkFiles, getFaviconToBuild, copyFontToBuild, startServer);
 
 // ========= exports =========
-let getSvgToBuild = gulp.series(compressSvg, copyImgToBuild);
-exports.getSvgToBuild = getSvgToBuild;
+// let getSvgToBuild = gulp.series(compressSvg, copyImgToBuild);
+// exports.getSvgToBuild = getSvgToBuild;
 // ========= exports =========
 exports.getSvgSprite = getSvgSprite;
 // exports.eraseBuild = eraseBuild;
@@ -416,7 +477,7 @@ exports.getCSS = getCSS;
 // exports.compressSvg = compressSvg;
 // exports.createSvgSprite = createSvgSprite;
 
-// exports.copyImgToBuild = copyImgToBuild;
+exports.copyImgToBuild = copyImgToBuild;
 // exports.copyFontToBuild = copyFontToBuild;
 
 // exports.eraseCompressedImg = eraseCompressedImg;

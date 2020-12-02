@@ -1,0 +1,48 @@
+.header-link {
+  display: flex;
+  align-items: center;
+  margin: 5px 45px 5px 42px;
+  padding: 10px 0;
+
+  @media (max-width: $desktop_breakpoint) {
+    margin: 5px 0 5px 33px;
+  }
+
+  @media (max-width: $tablet_breakpoint) {
+    margin: 5px 0 5px 23px;
+  }
+}
+
+.header-link span {
+  margin: 0 0 0 17px;
+
+  @include font_ptmono(16px, 18px, 400, $basic_light);
+
+  @media (max-width: $desktop_breakpoint) {
+    display: none;
+  }
+}
+
+.header-link__icon {
+  //
+}
+
+.header-link__icon--envelop {
+  width: 19px;
+  height: 14px;
+  // margin: 0 15px 0 0;
+  @media (max-width: $desktop_breakpoint) {
+    width: 25px;
+    height: 19px;
+  }
+}
+
+.header-link__icon--phone {
+  width: 18px;
+  height: 18px;
+  // margin: 0 15px 0 0;
+  @media (max-width: $desktop_breakpoint) {
+    width: 24px;
+    height: 24px;
+  }
+}

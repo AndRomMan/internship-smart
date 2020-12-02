@@ -1,0 +1,9 @@
+.accordeon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: $tablet_breakpoint) {
+    min-height: 24px;
+  }
+}

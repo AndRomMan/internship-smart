@@ -1,0 +1,19 @@
+.contacts {
+  width: 336px;
+
+  @media (max-width: $desktop_additional_breakpoint) {
+    width: 220px;
+  }
+
+  @media (max-width: $desktop_breakpoint) {
+    width: 50%;
+    padding: 38px $tablet_padding 0 15px;
+  }
+
+  @media (max-width: $tablet_breakpoint) {
+    width: 100%;
+    padding: 25px $mobile_padding 26px $mobile_padding;
+
+    @include border-top-line;
+  }
+}

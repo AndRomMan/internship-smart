@@ -1,0 +1,26 @@
+.nav {
+  display: flex;
+  flex-direction: column;
+  width: 40.2%;
+
+  outline: 1px solid $section_outline;
+
+  @media (max-width: $desktop_additional_breakpoint) {
+    width: 50.5%;
+    padding: 0 20px 0 20px;
+  }
+
+  @media (max-width: $desktop_breakpoint) {
+    width: 50%;
+    padding: 38px 20px 0 $tablet_padding;
+  }
+
+  @media (max-width: $tablet_breakpoint) {
+    width: 100%;
+    padding: 25px $mobile_padding 23px $mobile_padding;
+  }
+}
+
+.nav__list {
+  //
+}

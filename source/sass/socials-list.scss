@@ -1,0 +1,39 @@
+.socials-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  @media (max-width: $desktop_breakpoint) {
+    justify-content: flex-end;
+    max-width: 25%;
+  }
+
+  @media (max-width: $tablet_breakpoint) {
+    max-width: 100%;
+  }
+}
+
+.socials-list__item {
+  margin: 0 15px 5px 0;
+
+  @media (max-width: $desktop_breakpoint) {
+    margin: 0 0 0 15px;
+  }
+
+  @media (max-width: $tablet_breakpoint) {
+    margin: 0 7.5px 0 7.5px;
+  }
+}
+
+.socials-list__icon {
+  width: 27px;
+  height: 27px;
+}
+
+.socials-list__link {
+  //
+}

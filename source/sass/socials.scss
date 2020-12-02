@@ -1,0 +1,42 @@
+.socials {
+  width: 336px;
+
+  @media (max-width: $desktop_additional_breakpoint) {
+    width: 220px;
+  }
+
+
+  @media (max-width: $desktop_breakpoint) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 19px $tablet_padding 21px $tablet_padding;
+
+    @include border-bottom-line;
+  }
+
+  @media (max-width: $tablet_breakpoint) {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 46px $mobile_padding 49px $mobile_padding;
+  }
+}
+
+.socials__logo {
+  margin: 0 0 0 0;
+}
+
+.socials__logo img {
+  width: 216px;
+  height: 52px;
+  margin: 0 0 49px 0;
+
+  @media (max-width: $desktop_breakpoint) {
+    margin: 0;
+  }
+
+  @media (max-width: $tablet_breakpoint) {
+    margin-bottom: 78px;
+  }
+}

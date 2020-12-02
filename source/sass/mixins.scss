@@ -32,3 +32,12 @@
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
 }
+
+
+@mixin border-top-line {
+  border-top: 1px solid $footer_border;
+}
+
+@mixin border-bottom-line {
+  border-bottom: 1px solid $footer_border;
+}

@@ -1,0 +1,44 @@
+.accordeon-toggle {
+  display: none;
+
+  @media (max-width: $tablet_breakpoint) {
+    &--js {
+      display: block;
+      width: 24px;
+      height: 24px;
+      padding: 0;
+
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
+
+.accordeon-toggle--nav {
+  //
+}
+
+.accordeon-toggle--contacts {
+  //
+}
+
+.accordeon-toggle__icon {
+  display: none;
+  width: 24px;
+  height: 24px;
+}
+
+.accordeon-toggle__icon--open {
+  //
+}
+
+.accordeon-toggle__icon--close {
+  //
+}
+
+.accordeon-toggle__icon--js {
+  @media (max-width: $tablet_breakpoint) {
+    display: block;
+  }
+}

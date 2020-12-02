@@ -1,0 +1,17 @@
+.copyright {
+  @include border-top-line;
+  @include border-bottom-line;
+
+  @media (max-width: $desktop_breakpoint) {
+    //
+  }
+}
+
+.copyright a {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+
+  opacity: 0.5;
+
+  @include font_ptmono(13px, 24px, 400,  $basic_dark);
+}

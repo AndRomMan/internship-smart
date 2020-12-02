@@ -1,0 +1,22 @@
+.contacts-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  @media (max-width: $tablet_breakpoint) {
+    padding-top: 27px;
+  }
+}
+
+.contacts-list--close {
+  @media (max-width: $tablet_breakpoint) {
+    display: none;
+  }
+}
+
+.contacts-list a {
+  opacity: 0.5;
+
+  @include font_ptmono(15px, 25px, 400, $basic_dark);
+}

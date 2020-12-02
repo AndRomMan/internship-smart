@@ -1,0 +1,55 @@
+.footer {
+  margin: 0;
+}
+
+.footer h2 {
+  margin: 0 0 26px 0;
+
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  @include font_robotcon(15px, 16px, 400, $basic_dark);
+
+  @media (max-width: $tablet_breakpoint) {
+    margin: 0;
+  }
+}
+
+
+.footer__flex-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: $desktop_max_width;
+  margin: 0 auto;
+  padding: 65px $desktop_padding 57px $desktop_padding;
+
+  @media (max-width: $desktop_breakpoint) {
+    padding: 0 0 35px 0;
+  }
+
+  @media (max-width: $tablet_breakpoint) {
+    flex-direction: column;
+    padding: 0;
+  }
+}
+
+.footer__socials {
+  // FIXME удалить outline
+  // outline: 1px solid $section_outline;
+}
+
+.footer__nav {
+  // FIXME удалить outline
+  // outline: 1px solid $section_outline;
+}
+
+.footer__contacts {
+  // FIXME удалить outline
+  // outline: 1px solid $section_outline;
+}
+
+.footer__copyright {
+  // FIXME удалить outline
+  // outline: 1px solid $section_outline;
+}

@@ -1,0 +1,18 @@
+
+.button {
+  box-sizing: border-box;
+  min-width: 180px;
+  min-height: 45px;
+  padding: 10px 5px;
+
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  background: transparent;
+  border: 1px solid $basic_light;
+  border-radius: 5px;
+  cursor: pointer;
+  // @include font_robotcon(14px, 1, 700, $basic_light);
+
+  @include font_robotcon(14px, 16px, 700, $basic_light);
+}
