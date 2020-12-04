@@ -18,9 +18,7 @@ $tablet_padding: 25px;
 $tablet_width: 720px;
 // -------------------------- desktop
 $desktop_breakpoint: 1023px;
-$desktop_additional_breakpoint: 1220px;
-// $desktop_additional_breakpoint: 1400px;
-// $desktop_additional_breakpoint: 1300px;
+$desktop_additional_breakpoint: 1300px;
 $desktop_padding: 30px;
 $desktop_max_width: 1474px;
 
@@ -47,10 +45,10 @@ $font_darkgray: #666666;
 // -------------------------- background colors
 $body_back: #fafafa;
 // -------------------------- border colors
+$border_btn_rad: 5px;
 $advantage_border: #ebebeb;
-$footer_border: rgba(98, 105, 98, 0.2);
 // $footer_border: #626962;
-// $footer_border: #353735;
+$footer_border: rgba(98, 105, 98, 0.2);
 // -------------------------- effect colors
 $outline_color: #2770b4;
 

@@ -1,5 +1,46 @@
 .header {
+  position: relative;
+  z-index: 1;
+
   background-color: $basic_dark;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: 0;
+
+    width: 100%;
+    min-height: 879px;
+
+    background-image: url("../img/header_back_desk@1x.png");
+    background-position: top center;
+    background-size: cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/header_back_desk@2x.png");
+    }
+
+    @media (max-width: $desktop_breakpoint) {
+      min-height: 685px;
+
+      background-image: url("../img/header_back_tab@1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/header_back_tab@2x.png");
+      }
+    }
+
+    @media (max-width: $tablet_breakpoint) {
+      min-height: 647px;
+
+      background-image: url("../img/header_back_mob@1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/header_back_mob@2x.png");
+      }
+    }
+  }
 }
 
 .header__wrapper {
@@ -9,7 +50,7 @@
   padding: 31px 0;
 
   @media (max-width: $desktop_breakpoint) {
-    padding: 14px 0;
+    padding: 14px 0 6px 0;
   }
 
   @media (max-width: $tablet_breakpoint) {
@@ -18,6 +59,9 @@
 }
 
 .header__logo {
+  position: relative;
+  z-index: 1;
+
   margin-right: auto;
 }
 
@@ -38,8 +82,10 @@
 }
 
 .header__btn {
+  position: relative;
+  z-index: 1;
+
   margin: 0 3px 0 5px;
-  // margin: 0 3px 0 0;
 
   @media (max-width: $desktop_breakpoint) {
     display: none;
@@ -47,5 +93,6 @@
 }
 
 .header__link {
-  //
+  position: relative;
+  z-index: 1;
 }

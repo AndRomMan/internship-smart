@@ -17,7 +17,6 @@
       @@include('./img/compressed/sprite.svg')
     </div>
 
-    <!-- Шапка сайта -->
     <header class="header">
       <div class="container">
         <div class="header__wrapper">
@@ -27,9 +26,9 @@
               <source type="image/webp" srcset="img/logo_mob@1x.webp 1x, img/logo_mob@2x.webp 2x">
 
               <!-- 1х: 202px; 2x: 404px -->
-              <source media="(min-width: 768px)" srcset="img/logo_desk@1x.jpg 1x, img/logo_desk@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/logo_desk@1x.png 1x, img/logo_desk@2x.png 2x">
               <!-- 1х: 38px; 2x: 76px -->
-              <img src="img/logo_mob@1x.png" srcset="img/logo_mob@2x.jpg 2x" alt="Smart Device" width="38" height="38">
+              <img src="img/logo_mob@1x.png" srcset="img/logo_mob@2x.png 2x" alt="Smart Device" width="38" height="38">
             </picture>
           </a>
 
@@ -56,11 +55,68 @@
       </div>
     </header>
 
-    <!-- Основное содержимое страницы -->
     <main class="main">
+      <h1 class="visually-hidden">
+        Smart Device - компания по производству и монтажу печатных плат.
+      </h1>
+
+      <section class="promo">
+        <!-- <div class="container"> -->
+        <div class="promo__wrapper">
+          <div class="promo__text-wrapper">
+            <h2>
+              Печатные платы
+            </h2>
+            <p>
+              производство и монтаж, поставка комплектующих, блоков и модулей
+            </p>
+
+            <a href="#callback" class="promo__callback-link">
+              <span class="promo__callback-link--tab">Получить бесплатную консультацию</span>
+              <span class="promo__callback-link--mob">Бесплатная консультация</span>
+            </a>
+
+            <a href="#advantages" class="promo__advantages-link">
+              Скролл вниз
+            </a>
+          </div>
+
+          <div class="promo__img-wrapper">
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="img/board_desk@1x.webp 1x, img/board_desk@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/board_tab@1x.webp 1x, img/board_tab@2x.webp 2x">
+              <source type="image/webp" srcset="img/board_mob@1x.webp 1x, img/board_mob@2x.webp 2x">
+
+              <!-- 1х: 705px; 2x: 1410px -->
+              <source media="(min-width: 1024px)" srcset="img/board_desk@1x.png 1x, img/board_desk@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/board_tab@1x.png 1x, img/board_tab@2x.png 2x">
+              <!-- 1х: 301px; 2x: 602px -->
+              <img src="img/board_mob@1x.png" srcset="img/board_mob@2x.png 2x" alt="Образец печатной платы" width="301" height="220">
+            </picture>
+          </div>
+        </div>
+        <!-- </div> -->
+
+      </section>
+
+      <section id="advantages" class="advantages">
+
+      </section>
+
+      <section id="company" class="company">
+
+      </section>
+
+      <section id="services" class="services">
+
+      </section>
+
+      <section id="callback" class="callback">
+
+      </section>
+
     </main>
 
-    <!-- Подвал сайта -->
     <footer class="footer">
 
       <div class="footer__flex-wrapper">
@@ -74,7 +130,7 @@
             <picture>
               <source type="image/webp" srcset="img/logo_footer@1x.webp 1x, img/logo_footer@2x.webp 2x">
               <!-- 1х: 216px; 2x: 432px -->
-              <img src="img/logo_footer@1x.png" srcset="img/logo_footer@2x.jpg 2x" alt="Smart Device" width="216" height="52">
+              <img src="img/logo_footer@1x.png" srcset="img/logo_footer@2x.png 2x" alt="Smart Device" width="216" height="52">
             </picture>
           </a>
 
@@ -122,44 +178,44 @@
 
           <ul class="nav__list nav-list">
             <li class="nav-list__item">
-              <a href="#" class="copyright-list__link">
+              <a href="#company" class="nav-list__link">
                 О компании
               </a>
             </li>
             <li class="nav-list__item">
-              <a href="#" class="copyright-list__link">
+              <a href="#services" class="nav-list__link">
                 Продукты
               </a>
             </li>
             <li class="nav-list__item">
-              <a href="#" class="copyright-list__link">
+              <a href="#" class="nav-list__link">
                 Производство печатных плат
               </a>
             </li>
             <li class="nav-list__item">
-              <a href="#" class="copyright-list__link">
+              <a href="#" class="nav-list__link">
                 Монтаж печатных плат
               </a>
             </li>
             <li class="nav-list__item">
-              <a href="#" class="copyright-list__link">
+              <a href="#" class="nav-list__link">
                 Комплектующие
               </a>
             </li>
             <li class="nav-list__item">
-              <a href="#" class="copyright-list__link">
+              <a href="#" class="nav-list__link">
                 Доставка
               </a>
             </li>
             <li class="nav-list__item">
-              <a href="#" class="copyright-list__link">
+              <a href="#contacts" class="nav-list__link">
                 Контакты
               </a>
             </li>
           </ul>
         </nav>
 
-        <section class="footer__contacts contacts">
+        <section id="contacts" class="footer__contacts contacts">
           <div class="accordeon">
             <h2>
               Наш офис

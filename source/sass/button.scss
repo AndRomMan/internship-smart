@@ -10,7 +10,7 @@
 
   background: transparent;
   border: 1px solid $basic_light;
-  border-radius: 5px;
+  border-radius: $border_btn_rad;
   cursor: pointer;
   // @include font_robotcon(14px, 1, 700, $basic_light);
 
