@@ -7,7 +7,6 @@
   height: 100%;
 
   background-color: $modal_back;
-  // opacity: 0.8;
 }
 
 .modal .callback__wrapper {
@@ -36,7 +35,6 @@
 }
 
 .modal .callback-form {
-  // background-color: $basic_skyblue;
   padding: 0;
 }
 
@@ -45,25 +43,28 @@
   padding: 5px 20px 5px 0;
 }
 
-.modal__title,
-.modal__subtitle,
-.modal__btn,
-.modal__close {
-  display: none;
-}
-
 .modal .form-wrapper__title {
   display: none;
 }
 
-.modal h3 {
-  margin: 0 0 12px -1px;
-}
-
-.modal .modal__title {
+.modal .form-wrapper__modal-title {
   display: block;
 
   @include font_robotcon(28px, 39px, 400, $basic_light);
+}
+
+.modal .form-wrapper__subtitle {
+  display: none;
+
+  @include font_ptmono(16px, 22px, 400, $basic_light);
+}
+
+.modal .form-wrapper__modal-subtitle {
+  display: block;
+}
+
+.modal h3 {
+  margin: 0 0 12px -1px;
 }
 
 .modal p {
@@ -97,15 +98,12 @@
   }
 }
 
-.modal .form-wrapper__subtitle {
-  display: none;
-
-  @include font_ptmono(16px, 22px, 400, $basic_light);
+.modal button[type="submit"] {
+  width: 100%;
+  min-height: 47px;
+  margin-bottom: 29px;
 }
 
-.modal .modal__subtitle {
-  display: block;
-}
 
 .modal .form-agreement__text {
   margin-left: 32px;
@@ -119,41 +117,10 @@
   display: none;
 }
 
-.modal__btn-text {
-  display: none;
-}
-
-.modal .modal__btn-text {
+.modal .callback-form__modal-btn-text {
   display: block;
 }
 
-.modal button[type="submit"] {
-  width: 100%;
-  min-height: 47px;
-  margin-bottom: 29px;
-}
-
-
-.modal__close {
-  position: absolute;
-  top: 19px;
-  right: 14px;
-
-  display: none;
-  min-width: 20px;
-  min-height: 20px;
-
-  background-color: transparent;
-  border: none;
-
-  & svg {
-    width: 17px;
-    height: 17px;
-
-    fill: $basic_light;
-  }
-}
-
-.modal .modal__close {
+.modal .form-wrapper__modal-close {
   display: inline-block;
 }

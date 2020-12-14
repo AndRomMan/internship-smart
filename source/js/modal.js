@@ -1,3 +1,4 @@
+// modal.js
 'use strict';
 
 (function () {
@@ -12,7 +13,7 @@
   let pageBody = document.querySelector('body');
   let callbackSection = document.querySelector('.callback');
   let callbackBtn = document.querySelector('.header__btn');
-  let modalCloseBtn = document.querySelector('.modal__close');
+  let modalCloseBtn = document.querySelector('.form-wrapper__modal-close');
   let inputFocused = document.querySelector('#username');
 
   let overlayLinks = document.querySelectorAll('a');

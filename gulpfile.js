@@ -335,7 +335,7 @@ function compressPngQuant() {
     .pipe(
       imagemin([
         imageminPngQuant({
-          quality: [0.7, 0.75],
+          quality: [0.6, 0.65],
           speed: 6,
           strip: true,
         }),

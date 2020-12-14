@@ -12,7 +12,7 @@
   var pageBody = document.querySelector('body');
   var callbackSection = document.querySelector('.callback');
   var callbackBtn = document.querySelector('.header__btn');
-  var modalCloseBtn = document.querySelector('.modal__close');
+  var modalCloseBtn = document.querySelector('.form-wrapper__modal-close');
   var inputFocused = document.querySelector('#username');
   var overlayLinks = document.querySelectorAll('a');
   var overlayBtns = document.querySelectorAll('button');

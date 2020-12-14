@@ -1,0 +1,42 @@
+
+.callback-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 407px;
+  min-height: 55px;
+  margin: 0 0 42px 98px;
+  padding: 10px 10px;
+
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  background-color: $basic_skyblue;
+  border-radius: $border_btn_rad;
+
+  @include font_robotcon(16px, 19px, 700, $basic_light);
+
+  @media (max-width: $desktop_breakpoint) {
+    max-width: 379px;
+    margin: 0 0 42px 51px;
+  }
+
+  @media (max-width: $tablet_breakpoint) {
+    min-width: 287px;
+    margin: 0 0 30px 0;
+  }
+}
+
+.callback-link__tab {
+  @media (max-width: $tablet_breakpoint) {
+    display: none;
+  }
+}
+
+.callback-link__mob {
+  display: none;
+
+  @media (max-width: $tablet_breakpoint) {
+    display: block;
+  }
+}

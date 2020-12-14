@@ -20,7 +20,7 @@
   justify-content: flex-end;
   max-width: $desktop_cards_max_width;
   margin: 0 auto;
-  padding: 62px 15px 78px 15px;
+  padding: 62px 15px 81px 15px;
 
   @media (max-width: $desktop_breakpoint) {
     justify-content: center;
@@ -108,7 +108,7 @@
 
 .callback img {
   position: absolute;
-  top: 98%;
+  top: 100%;
   left: -526%;
 
   width: 511px;

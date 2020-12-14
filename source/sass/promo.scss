@@ -30,31 +30,29 @@
   &::after {
     content: "";
     position: absolute;
-    top: 153px;
-    left: 828px;
+    top: 152px;
+    left: 829px;
     z-index: 1;
 
     width: 611px;
-    height: 486px;
+    height: 487px;
 
     background-image: url("../img/promo_back_triangles.svg");
     background-repeat: no-repeat;
     background-size: contain;
 
     @media (max-width: $desktop_breakpoint) {
-      top: 0;
-      left: 456px;
+      top: -51px;
+      left: 393px;
 
-      width: 500px;
-      height: 385px;
+      transform: scale(0.79);
     }
 
     @media (max-width: $tablet_breakpoint) {
-      top: 4px;
-      left: 168px;
+      top: -56px;
+      left: 92px;
 
-      width: 500px;
-      height: 367px;
+      transform: scale(0.755);
     }
   }
 }
@@ -155,45 +153,7 @@
 }
 
 .promo__callback-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 407px;
-  min-height: 55px;
-  margin: 0 0 42px 98px;
-  padding: 10px 10px;
-
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-
-  background-color: $basic_skyblue;
-  border-radius: $border_btn_rad;
-
-  @include font_robotcon(16px, 19px, 700, $basic_light);
-
-  @media (max-width: $desktop_breakpoint) {
-    max-width: 379px;
-    margin: 0 0 42px 51px;
-  }
-
-  @media (max-width: $tablet_breakpoint) {
-    min-width: 287px;
-    margin: 0 0 30px 0;
-  }
-
-  &--tab {
-    @media (max-width: $tablet_breakpoint) {
-      display: none;
-    }
-  }
-
-  &--mob {
-    display: none;
-
-    @media (max-width: $tablet_breakpoint) {
-      display: block;
-    }
-  }
+  //
 }
 
 .promo__advantages-link {
