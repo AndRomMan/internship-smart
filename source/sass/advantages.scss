@@ -1,0 +1,85 @@
+.advantages {
+  // overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.advantages__list {
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: $desktop_max_width;
+  margin: 0 auto;
+  padding: 97px 0 50px 0;
+
+  list-style: none;
+
+
+  @media (max-width: $desktop_breakpoint) {
+    padding: 40px 0 40px 0;
+  }
+
+  @media (max-width: $tablet_breakpoint) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 27px 0 27px 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 7.8%;
+    left: -2.7%;
+
+    width: 260px;
+    height: 224px;
+
+    background-image: url("../img/promo_back_triangle_small.svg");
+    transform: rotate(-90deg);
+
+    @media (max-width: $desktop_breakpoint) {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -2.5%;
+    left: 38.8%;
+    z-index: -1;
+
+    width: 560px;
+    height: 486px;
+
+    background-image: url("../img/promo_back_triangle_big.svg");
+    transform: rotate(-90deg);
+
+    @media (max-width: $desktop_breakpoint) {
+      bottom: -13%;
+      left: 57.8%;
+    }
+
+    @media (max-width: $tablet_breakpoint) {
+      bottom: -7.9%;
+      left: 35.8%;
+    }
+  }
+}
+
+.advantages__item {
+  width: 38.7%;
+  max-width: 570px;
+  margin: 15px;
+
+  @media (max-width: $desktop_breakpoint) {
+    width: 44.7%;
+  }
+
+  @media (max-width: $tablet_breakpoint) {
+    width: 90.6%;
+    margin: 10px 15px;
+  }
+}

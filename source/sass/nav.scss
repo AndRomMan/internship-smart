@@ -3,9 +3,7 @@
   flex-direction: column;
   width: 40.2%;
 
-  outline: 1px solid $section_outline;
-
-  @media (max-width: $desktop_additional_breakpoint) {
+  @media (max-width: $desktop_footer_breakpoint) {
     width: 50.5%;
     padding: 0 20px 0 20px;
   }

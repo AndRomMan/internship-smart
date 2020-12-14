@@ -15,7 +15,6 @@
   }
 }
 
-
 .footer__flex-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -35,21 +34,90 @@
 }
 
 .footer__socials {
-  // FIXME удалить outline
-  // outline: 1px solid $section_outline;
+  //
 }
 
 .footer__nav {
-  // FIXME удалить outline
-  // outline: 1px solid $section_outline;
+  //
 }
 
 .footer__contacts {
-  // FIXME удалить outline
-  // outline: 1px solid $section_outline;
+  //
 }
 
 .footer__copyright {
-  // FIXME удалить outline
-  // outline: 1px solid $section_outline;
+  //
+}
+
+.footer a[href] {
+  &:hover {
+    position: relative;
+
+    outline: none;
+    opacity: 1;
+
+    &::after {
+      @include underline;
+    }
+  }
+
+  &:focus {
+    position: relative;
+
+    outline: none;
+    opacity: 1;
+
+    &::after {
+      @include underline;
+    }
+  }
+
+
+  &:active {
+    outline: none;
+    opacity: $active_opacity;
+  }
+}
+
+.footer button {
+  outline-offset: $outline_shift;
+
+  &:hover {
+    outline: $underline_height solid $basic_skyblue;
+  }
+
+
+  &:focus {
+    outline: $underline_height solid $basic_skyblue;
+  }
+
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.socials-list__link {
+  &::after {
+    display: none;
+  }
+
+  &:hover {
+    & .socials__icon {
+      outline: $underline_height solid $basic_skyblue;
+      outline-offset: $outline_shift;
+    }
+  }
+
+  &:focus {
+    & .socials__icon {
+      outline: $underline_height solid $basic_skyblue;
+      outline-offset: $outline_shift;
+    }
+  }
+
+
+  &:active {
+    opacity: 0.7;
+  }
 }

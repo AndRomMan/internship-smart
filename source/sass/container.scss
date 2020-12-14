@@ -1,11 +1,9 @@
 .container {
-  // FIXME del outline
   width: auto;
   max-width: $desktop_max_width;
   margin: 0 auto;
   padding: 0 $desktop_padding;
 
-  outline: 2px solid $container_outline;
 
   @media (max-width: $desktop_breakpoint) {
     padding: 0 $tablet_padding;

@@ -18,9 +18,10 @@ $tablet_padding: 25px;
 $tablet_width: 720px;
 // -------------------------- desktop
 $desktop_breakpoint: 1023px;
-$desktop_additional_breakpoint: 1300px;
+$desktop_footer_breakpoint: 1300px;
 $desktop_padding: 30px;
 $desktop_max_width: 1474px;
+$desktop_cards_max_width: 1200px;
 
 // -------------------------- basic colors
 $basic_light: #ffffff;
@@ -44,17 +45,27 @@ $font_darkgray: #666666;
 
 // -------------------------- background colors
 $body_back: #fafafa;
+$modal_back: rgba(0, 0, 0, 0.8);
+$form_input_back: rgba(255, 255, 255, 0.1);
+
 // -------------------------- border colors
 $border_btn_rad: 5px;
 $advantage_border: #ebebeb;
 // $footer_border: #626962;
 $footer_border: rgba(98, 105, 98, 0.2);
 // -------------------------- effect colors
-$outline_color: #2770b4;
+// $outline_shift: 5px;
+$outline_shift: 5px;
+$underline_height: 4px;
+$active_opacity: 0.7;
+$underline_tablet_shift: 17px;
+$underline_mobile_shift: 18px;
+$underline_height: 3px;
 
 // -------------------------- colors of technology
-$container_outline: rgba(177, 180, 0, 0);
-$section_outline: rgba(141, 128, 10, 0);
+// $container_outline: rgba(177, 180, 0, 0);
+// $section_outline: rgba(141, 128, 10, 0);
+
 // .button:hover,
 // .button:focus,
 // .button:active

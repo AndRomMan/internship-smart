@@ -32,7 +32,7 @@
             </picture>
           </a>
 
-          <a class="header__link header-link" href="mailto:info@sd.ru">
+          <a class="header__link header-link" href="mailto:info@sd.ru" aria-label="Почтовый адрес компании info@sd.ru">
             <svg class="header-link__icon header-link__icon--envelop" width="19" height="14" role="img">
               <use xlink:href="#icon-envelope"></use>
             </svg>
@@ -41,7 +41,7 @@
             </span>
           </a>
 
-          <a class="header__link header-link" href="tel:+74950005252">
+          <a class="header__link header-link" href="tel:+74950005252" aria-label="Телефон компании +74950005252">
             <svg class="header-link__icon header-link__icon--phone" width="18" height="18" role="img">
               <use xlink:href="#icon-phone-call"></use>
             </svg>
@@ -61,7 +61,6 @@
       </h1>
 
       <section class="promo">
-        <!-- <div class="container"> -->
         <div class="promo__wrapper">
           <div class="promo__text-wrapper">
             <h2>
@@ -71,12 +70,12 @@
               производство и монтаж, поставка комплектующих, блоков и модулей
             </p>
 
-            <a href="#callback" class="promo__callback-link">
+            <a href="#callback" class="promo__callback-link" aria-label="Бесплатная консультация">
               <span class="promo__callback-link--tab">Получить бесплатную консультацию</span>
               <span class="promo__callback-link--mob">Бесплатная консультация</span>
             </a>
 
-            <a href="#advantages" class="promo__advantages-link">
+            <a href="#advantages" class="promo__advantages-link" aria-label="Перейти к секции преимуществ нашей компании">
               Скролл вниз
             </a>
           </div>
@@ -95,30 +94,294 @@
             </picture>
           </div>
         </div>
-        <!-- </div> -->
-
       </section>
 
-      <section id="advantages" class="advantages">
+      <div class="background-wrapper">
+        <section id="advantages" class="advantages">
+          <h2 class="visually-hidden">
+            Наши преимущества
+          </h2>
 
-      </section>
+          <ul class="advantages__list">
+            <li class="advantages__item">
+              <a href="#" class="advantages-item__link advantages-link">
+                <h3>
+                  Оперативные сроки
+                </h3>
+                <p>
+                  Усовершенствованная логистическая система позволяет нам просчитывать&nbsp;стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки
+                </p>
+                <div class="advantages-link__icon advantages-link__icon--stopwatch">
+                  <svg class="svg" width="29" height="35" role="img">
+                    <use xlink:href="#icon-stopwatch"></use>
+                  </svg>
+                </div>
+              </a>
 
-      <section id="company" class="company">
+            </li>
 
-      </section>
+            <li class="advantages__item advantages-item">
+              <a href="#" class="advantages-item__link advantages-link">
+                <h3>
+                  Крупные поставщики
+                </h3>
+                <p>
+                  Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспечивает хорошее качество нашей продукции.
+                </p>
+
+                <div class="advantages-link__icon advantages-link__icon--hired">
+                  <svg width="35" height="35" role="img">
+                    <use xlink:href="#icon-hired"></use>
+                  </svg>
+                </div>
+              </a>
+            </li>
+
+            <li class="advantages__item advantages-item">
+              <a href="#" class="advantages-item__link advantages-link">
+                <h3>
+                  Полная конфиденциальность
+                </h3>
+                <p>
+                  По желанию клиента мы обеспечиваем полную конфиденциальность.
+                  <!-- &emsp; -->
+                </p>
+
+                <div class="advantages-link__icon advantages-link__icon--detective">
+                  <svg width="36" height="31" role="img">
+                    <use xlink:href="#icon-detective"></use>
+                  </svg>
+                </div>
+              </a>
+            </li>
+
+            <li class="advantages__item advantages-item">
+              <a href="#" class="advantages-item__link advantages-link">
+                <h3>
+                  Персонализация стоимости
+                </h3>
+                <p>
+                  Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.
+                  <!-- &emsp; -->
+                </p>
+
+                <div class="advantages-link__icon advantages-link__icon--tag">
+                  <svg width="35" height="35" role="img">
+                    <use xlink:href="#icon-tag"></use>
+                  </svg>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <section id="company" class="company">
+
+          <div class="company__wrapper">
+            <div class="company__text company-text">
+              <h2>
+                О компании
+              </h2>
+
+              <div class="company-text__wrapper">
+                <p>
+                  Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
+                </p>
+                <p>
+                  Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.
+                </p>
+              </div>
+              <a href="#" class="button" aria-label="Узнать о нашей компании">
+                Подробнее
+              </a>
+            </div>
+
+            <picture class="company__img">
+              <source type="image/webp" media="(min-width: 1024px)" srcset="img/2005_desk@1x.webp 1x, img/2005_desk@2x.webp 2x">
+              <source type="image/webp" srcset="img/2005_tab@1x.webp 1x, img/2005_tab@2x.webp 2x">
+
+              <!-- 1х: 317px; 2x: 634px -->
+              <source media="(min-width: 1024px)" srcset="img/2005_desk@1x.png 1x, img/2005_desk@2x.png 2x">
+              <!-- 1х: 362px; 2x: 724px -->
+              <!-- <source srcset="img/2005_tab@1x.png 1x, img/2005_tab@2x.png 2x"> -->
+
+              <img src="img/2005_tab@1x.png" srcset="img/2005_tab@2x.png 2x" alt="2005" width="362" height="252">
+            </picture>
+          </div>
+        </section>
+      </div>
 
       <section id="services" class="services">
+        <div class="services__wrapper">
+          <h2>
+            Service Device предлагает следующие товары и&nbsp;услуги
+          </h2>
 
+          <ul class="services__list">
+            <li class="services__item">
+              <a class="services__link services-link" href="#">
+                <h3>
+                  Производство печатных плат
+                </h3>
+
+                <!-- <div class="services-link__img-wrapper"></div> -->
+                <picture class="services-link__img">
+                  <source type="image/webp" media="(min-width: 1024px)" srcset="img/production_desk@1x.webp 1x, img/production_desk@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/production_tab@1x.webp 1x, img/production_tab@2x.webp 2x">
+                  <source type="image/webp" srcset="img/production_mob@1x.webp 1x, img/production_mob@2x.webp 2x">
+
+                  <!-- 1х: 370px; 2x: 740px -->
+                  <source media="(min-width: 1024px)" srcset="img/production_desk@1x.png 1x, img/production_desk@2x.png 2x">
+                  <!-- 1х: 720px; 2x: 1440px -->
+                  <source media="(min-width: 768px)" srcset="img/production_tab@1x.png 1x, img/production_tab@2x.png 2x">
+                  <!-- 1х: 290px; 2x: 580px -->
+                  <img src="img/production_mob@1x.png" srcset="img/production_mob@2x.png 2x" alt="Линия производства" width="290" height="256">
+                </picture>
+
+                <div class="services-link__icon">
+                  <svg width="4" height="8" role="img">
+                    <use xlink:href="#icon-chevron-right-small"></use>
+                  </svg>
+                </div>
+              </a>
+            </li>
+
+            <li class="services__item">
+              <a class="services__link services-link" href="#">
+                <h3>
+                  Монтаж печатных плат
+                </h3>
+
+                <!-- <div class="services-link__img-wrapper"></div> -->
+                <picture class="services-link__img">
+                  <source type="image/webp" media="(min-width: 1024px)" srcset="img/mounting_desk@1x.webp 1x, img/mounting_desk@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/mounting_tab@1x.webp 1x, img/mounting_tab@2x.webp 2x">
+                  <source type="image/webp" srcset="img/mounting_mob@1x.webp 1x, img/mounting_mob@2x.webp 2x">
+
+                  <!-- 1х: 370px; 2x: 740px -->
+                  <source media="(min-width: 1024px)" srcset="img/mounting_desk@1x.png 1x, img/mounting_desk@2x.png 2x">
+                  <!-- 1х: 715px; 2x: 1430px -->
+                  <source media="(min-width: 768px)" srcset="img/mounting_tab@1x.png 1x, img/mounting_tab@2x.png 2x">
+                  <!-- 1х: 290px; 2x: 580px -->
+                  <img src="img/mounting_mob@1x.png" srcset="img/mounting_mob@2x.png 2x" alt="Линия монтажа" width="290" height="256">
+                </picture>
+
+                <div class="services-link__icon">
+                  <svg width="4" height="8" role="img">
+                    <use xlink:href="#icon-chevron-right-small"></use>
+                  </svg>
+                </div>
+              </a>
+            </li>
+
+            <li class="services__item">
+              <a class="services__link services-link" href="#">
+                <h3>
+                  Комплектующие для светотехники
+                </h3>
+
+                <!-- <div class="services-link__img-wrapper"></div> -->
+                <picture class="services-link__img">
+                  <source type="image/webp" media="(min-width: 1024px)" srcset="img/components_desk@1x.webp 1x, img/components_desk@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/components_tab@1x.webp 1x, img/components_tab@2x.webp 2x">
+                  <source type="image/webp" srcset="img/components_mob@1x.webp 1x, img/components_mob@2x.webp 2x">
+
+                  <!-- 1х: 370px; 2x: 740px -->
+                  <source media="(min-width: 1024px)" srcset="img/components_desk@1x.png 1x, img/components_desk@2x.png 2x">
+                  <!-- 1х: 715px; 2x: 1430px -->
+                  <source media="(min-width: 768px)" srcset="img/components_tab@1x.png 1x, img/components_tab@2x.png 2x">
+                  <!-- 1х: 290px; 2x: 580px -->
+                  <img src="img/components_mob@1x.png" srcset="img/components_mob@2x.png 2x" alt="Светодиодная лента" width="290" height="256">
+                </picture>
+
+                <div class="services-link__icon">
+                  <svg width="4" height="8" role="img">
+                    <use xlink:href="#icon-chevron-right-small"></use>
+                  </svg>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <section id="callback" class="callback">
+        <h2 class="visually-hidden">
+          Бесплатная консультация по телефону
+        </h2>
 
+        <div class="callback__wrapper">
+          <picture class="callback__img">
+            <source type="image/webp" srcset="img/paper_airplane_desk@1x.webp 1x, img/paper_airplane_desk@2x.webp 2x">
+
+            <!-- 1х: 511px; 2x: 1022px -->
+            <img src="img/paper_airplane_desk@1x.png" srcset="img/paper_airplane_desk@2x.png 2x" alt="Линия производства" width="511" height="288">
+          </picture>
+
+          <div class="callback__form-wrapper form-wrapper">
+            <h3>
+              <span class="form-wrapper__title">
+                Остались вопросы? Задайте&nbsp;их&nbsp;нам!
+              </span>
+
+              <span class="modal__title">
+                Закажите звонок
+              </span>
+            </h3>
+            <p>
+              <span class="form-wrapper__subtitle">
+                Мы проконсультируем Вас бесплатно
+              </span>
+              <span class="modal__subtitle">
+                Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
+              </span>
+            </p>
+
+            <form class="callback-form" action="#" method="post">
+              <label for="username"></label>
+              <input class="callback-form__input" type="text" id="username" name="username" placeholder="Имя" aria-label="Впишите ваше имя" required>
+
+              <label for="userphone"></label>
+              <input class="callback-form__input" type="tel" id="userphone" name="userphone" maxlength="17" placeholder="Телефон" aria-label="Впишите номер вашего телефона" required>
+
+              <textarea class="callback-form__textarea" id="userquestion" name="userquestion" placeholder="Ваш вопрос"></textarea>
+
+              <label class="callback-form__agreement form-agreement" for="useragreement">
+                <input class="callback-form__input visually-hidden" type="checkbox" id="useragreement" name="useragreement" required aria-label="Выберете если согласны на обработку персональных данных" checked>
+
+                <span class="form-agreement__checkbox">
+                  <svg width="16" height="16" role="img">
+                    <use xlink:href="#icon-check"></use>
+                  </svg>
+                </span>
+                <span class="form-agreement__text">
+                  Я согласен на обработку персональных данных
+                </span>
+              </label>
+
+              <button class="callback-form__btn button" type="submit" aria-label="Нажмите, чтобы оставить заявку">
+                <span class="callback-form__btn-text">
+                  Задать вопрос
+                </span>
+                <span class="modal__btn-text">
+                  Отправить
+                </span>
+              </button>
+            </form>
+
+            <button class="modal__close" aria-label="Закрыть модальное окно">
+              <svg width="17" height="17" role="img">
+                <!-- <use xlink:href="#icon-close"></use> -->
+                <use xlink:href="#icon-close-narrow"></use>
+              </svg>
+            </button>
+          </div>
+
+        </div>
       </section>
-
     </main>
 
     <footer class="footer">
-
       <div class="footer__flex-wrapper">
 
         <section class="footer__socials socials">
@@ -136,21 +399,21 @@
 
           <ul class="socials-list">
             <li class="socials-list__item">
-              <a class="socials-list__link" href="https://www.facebook.com" aria-label="Страница компании Facebook.">
+              <a class="socials-list__link" href="https://www.facebook.com" aria-label="Страница компании Facebook">
                 <svg class="socials__icon" width="27" height="27" role="img">
                   <use xlink:href="#icon-fb-round"></use>
                 </svg>
               </a>
             </li>
             <li class="socials-list__item">
-              <a class="socials-list__link" href="https://ok.ru/" aria-label="Страница компании Одноклассники.">
+              <a class="socials-list__link" href="https://ok.ru/" aria-label="Страница компании Одноклассники">
                 <svg class="socials__icon" width="27" height="27" role="img">
                   <use xlink:href="#icon-ok-round"></use>
                 </svg>
               </a>
             </li>
-            <li class="socials-list__item" aria-label="Страница компании ВКонтакте.">
-              <a class="socials-list__link" href="https://vk.com">
+            <li class="socials-list__item">
+              <a class="socials-list__link" href="https://vk.com" aria-label="Страница компании ВКонтакте">
                 <svg class="socials__icon" width="27" height="27" role="img">
                   <use xlink:href="#icon-vk-round"></use>
                 </svg>
@@ -165,7 +428,7 @@
               Разделы сайта
             </h2>
 
-            <button type="button" class="accordeon-toggle accordeon-toggle--nav">
+            <button type="button" class="accordeon-toggle accordeon-toggle--nav" aria-label="Открыть  меню навигации по сайту">
               <svg class="accordeon-toggle__icon accordeon-toggle__icon--open" width="24" height="24" role="img">
                 <use xlink:href="#icon-plus"></use>
               </svg>
@@ -221,7 +484,7 @@
               Наш офис
             </h2>
 
-            <button type="button" class="accordeon-toggle accordeon-toggle--contacts">
+            <button type="button" class="accordeon-toggle accordeon-toggle--contacts" aria-label="Открыть список наших контактов">
               <svg class="accordeon-toggle__icon accordeon-toggle__icon--open" width="24" height="24" role="img">
                 <use xlink:href="#icon-plus"></use>
               </svg>
@@ -234,7 +497,7 @@
 
           <ul class="contacts__list contacts-list">
             <li class="contacts-list__item">
-              <a href="#" class="copyright-list__link" aria-label="Перейти на Яндекс карту.">
+              <a href="#" class="copyright-list__link" aria-label="Наш адрес: город Мытищи, Олимпийский проспект, дом 10">
                 г. Мытищи, Олимпийский проспект, д.10
               </a>
             </li>
@@ -290,8 +553,11 @@
 
     </footer>
 
-
     <script src="js/accordeon.js"></script>
+    <script src="js/input-validating.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/smoothscroll-polyfill.js"></script>
+    <script src="js/smooth-scroll.js"></script>
     <script src="js/main.js"></script>
   </body>
 

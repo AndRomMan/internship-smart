@@ -256,3 +256,21 @@
     height: 220px;
   }
 }
+
+.promo a[href] {
+  outline-offset: $outline_shift;
+
+  &:hover {
+    outline: $underline_height solid $basic_light;
+    opacity: 1;
+  }
+
+  &:focus {
+    outline: $underline_height solid $basic_light;
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}

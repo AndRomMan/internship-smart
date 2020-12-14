@@ -1,0 +1,133 @@
+.advantages-link {
+  position: relative;
+
+  display: inline-block;
+  height: 100%;
+  min-height: 299px;
+  padding: 95px 40px 25px 43px;
+
+  background-color: $body_back;
+  border: 1px solid $advantage_border;
+  border-left: 3px solid $basic_skyblue;
+
+  @media (max-width: $desktop_breakpoint) {
+    min-height: 232px;
+    padding: 65px 20px 12px 25px;
+  }
+
+  @media (max-width: $tablet_breakpoint) {
+    padding: 72px 10px 13px 25px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $basic_skyblue;
+    border-color: $basic_skyblue;
+    outline: none;
+
+    & h3 {
+      color: $basic_light;
+    }
+
+    & p {
+      color: $basic_light;
+    }
+
+    & .advantages-link__icon {
+      fill: $basic_light;
+    }
+  }
+}
+
+.advantages-link h3 {
+  margin: 0 0 15px 0;
+
+  @include font_robotcon(24px, 34px, 400, $basic_skyblue);
+
+  @media (max-width: $desktop_breakpoint) {
+    margin: 0 0 8px;
+  }
+
+  @media (max-width: $tablet_breakpoint) {
+    margin: 0 0 10px;
+
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.advantages-link p {
+  margin: 0 0 10px 0;
+
+  @include font_ptmono(16px, 22px, 400, $font_darkgray);
+}
+//
+
+.advantages-link__icon {
+  position: absolute;
+  top: 32px;
+  left: 33px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+
+  fill: $basic_skyblue;
+
+  @media (max-width: $desktop_breakpoint) {
+    top: 13px;
+    left: 16px;
+  }
+
+  @media (max-width: $tablet_breakpoint) {
+    top: 16px;
+    left: 16px;
+  }
+}
+
+.advantages-link__icon--stopwatch svg {
+  width: 29px;
+  height: 35px;
+
+  @media (max-width: $desktop_breakpoint) {
+    width: 29px;
+    height: 36px;
+  }
+}
+
+.advantages-link__icon--hired svg {
+  width: 35px;
+  height: 35px;
+
+  @media (max-width: $desktop_breakpoint) {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.advantages-link__icon--detective svg {
+  width: 36px;
+  height: 31px;
+
+  @media (max-width: $desktop_breakpoint) {
+    width: 30px;
+    height: 26px;
+  }
+
+  // @media (max-width: $tablet_breakpoint) {
+  //   //
+  // }
+}
+
+
+.advantages-link__icon--tag svg {
+  width: 35px;
+  height: 35px;
+
+  @media (max-width: $desktop_breakpoint) {
+    width: 32px;
+    height: 32px;
+  }
+}

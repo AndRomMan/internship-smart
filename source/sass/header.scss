@@ -96,3 +96,36 @@
   position: relative;
   z-index: 1;
 }
+
+.header a[href] {
+  outline-offset: $outline_shift;
+
+  &:hover {
+    outline: $underline_height solid $basic_light;
+  }
+
+  &:focus {
+    outline: $underline_height solid $basic_light;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+
+.header button {
+  outline-offset: $outline_shift;
+
+  &:hover {
+    outline: $underline_height solid $basic_light;
+  }
+
+  &:focus {
+    outline: $underline_height solid $basic_light;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}

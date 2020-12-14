@@ -41,3 +41,20 @@
 @mixin border-bottom-line {
   border-bottom: 1px solid $footer_border;
 }
+
+@mixin underline {
+  content: "";
+  position: absolute;
+  top: $underline_tablet_shift;
+  left: 0;
+
+  width: 100%;
+  height: $underline_height;
+
+  background-color: $basic_skyblue;
+  opacity: 1;
+
+  @media (max-width: $tablet_breakpoint) {
+    top: $underline_mobile_shift;
+  }
+}

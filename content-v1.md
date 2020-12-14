@@ -23,9 +23,9 @@
 ***
 ## Font set
 
- * 400:  400
- * 500:  500
- * 700:  700
+*  400:  Regular
+*  500:  Medium
+*  700:  Bold
 
 ```
     font-family: Roboto Condensed;
@@ -116,6 +116,18 @@ $body_back: #fafafa;
 ```
     $advantage_border: #ebebeb;
     border: 1px solid $advantage_border;
+```
+
+***
+### Footer section border
+
+```
+$footer_border:  #626962;
+
+opacity: 0.2;
+/* #353735 */
+
+border: 1px solid $footer_border;
 ```
 
 ***
@@ -233,6 +245,8 @@ line-height: 25px;
 
 ### promo__link
 Получить бесплатную консультацию
+
+ссылка “Получить бесплатную консультацию” - якорная, плавно прокручивающими страницу до формы в подвале
 ```
 desktop:
 font-family: Roboto Condensed;
@@ -246,6 +260,8 @@ color: $basic_light;
 
 ### promo__btn
 Скролл вниз
+
+ссылка “Скролл вниз” - якорная, плавно прокручивающими страницу до блока преимуществ
 
 ```
 desktop:
@@ -290,7 +306,7 @@ tablet:
 ```
 mobile:
 font-size: 20px;
-line-height: 28pxж
+line-height: 28px
 ```
 #### advantages-item__text
 Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки
@@ -315,8 +331,8 @@ color: $basic_light;
 
 ***
 ***
-## description
-### description__title
+## company
+### company__title
 О компании
 ```
 desktop:
@@ -336,9 +352,9 @@ line-height:45px;
 ```
 mobile:
 font-size: 28px;
-line-height: 39pxж
+line-height: 39px
 ```
-### description__text
+### company__text
 Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
 
 Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.
@@ -352,7 +368,7 @@ line-height: 22px;
 color: $font_darkgray;
 ```
 
-### description__btn button
+### company__btn button
 
 ```
 desktop:
@@ -388,9 +404,21 @@ font-size: 32px;
 line-height: 45px;
 ```
 
+```
+mobile:
+font-size: 28px;
+line-height: 39px;
+```
+
+
 ### services__item = services-item services__link
 #### services-item__title
 Производство печатных плат
+
+Монтаж печатных плат
+
+Комплектующие для светотехники
+
 ```
 desktop:
 font-family: Roboto Condensed;
@@ -418,7 +446,7 @@ color: $basic_light;
 ```
 tablet:
 font-size: 32px;
-line-height: 45pxж
+line-height: 45px;
 ```
 
 ```
@@ -552,29 +580,70 @@ line-height: 24px;
 color: $basic_dark;
 letter-spacing: 0.04em;
 opacity: 0.5;
+
+text-transform: uppercase;
+
 ```
 
 ***
+*  400:  Regular
+*  500:  Medium
+*  700:  Bold
+
+@include font_robotcon($size, $line_height, $weight, $color);
+
+@include font_robot($size, $line_height, $weight, $color);
+
+@include font_ptmono($size, $line_height, $weight, $color);
+
 ***
+
 ## callback-modal
-___Стили совпадают со стилями формы обратной связи___
+___Стили совпадают со стилями формы обратной связи для mobile___
 
 ### callback-modal__title
 Закажите звонок
 
+```
+@include font_robotcon(28px, 39px, 400, $basic_light);
+```
+
 ### callback-modal__subtitle
 Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
+
+```
+@include font_ptmono(16px, 22px, 400, $basic_light);
+```
+
 
 ### callback-modal__subtitle input placeholder
 Имя
 Телефон
 Ваш вопрос
 
+```
+@include font_ptmono(16px, 22px, 400, $basic_light);
+```
 ### callback-modal__label agreement
 
 Я согласен на обработку  персональных данных
+
+```
+@include font_ptmono(14px, 16px, 400, $basic_light);
+
+opacity: 0.8;
+```
+
+
 ### callback-modal__btn button
 Отправить
+```
+@include font_robotcon(14px, 16px, 400, $basic_light);
+
+text-align: center;
+letter-spacing: 0.05em;
+text-transform: uppercase;
+```
 
 ***
 ***

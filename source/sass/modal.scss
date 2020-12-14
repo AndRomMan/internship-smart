@@ -1,0 +1,159 @@
+.modal {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: $modal_back;
+  // opacity: 0.8;
+}
+
+.modal .callback__wrapper {
+  width: 490px;
+  margin: 197px auto;
+  padding: 30px 40px 32px;
+
+  background-color: $basic_skyblue;
+
+  &::before {
+    display: none;
+  }
+
+  &::after {
+    display: none;
+  }
+}
+
+.modal .form-wrapper {
+  width: 100%;
+  padding: 0;
+}
+
+.modal .callback__img {
+  display: none;
+}
+
+.modal .callback-form {
+  // background-color: $basic_skyblue;
+  padding: 0;
+}
+
+.modal .form-agreement {
+  width: 100%;
+  padding: 5px 20px 5px 0;
+}
+
+.modal__title,
+.modal__subtitle,
+.modal__btn,
+.modal__close {
+  display: none;
+}
+
+.modal .form-wrapper__title {
+  display: none;
+}
+
+.modal h3 {
+  margin: 0 0 12px -1px;
+}
+
+.modal .modal__title {
+  display: block;
+
+  @include font_robotcon(28px, 39px, 400, $basic_light);
+}
+
+.modal p {
+  margin: 0 0 32px -1px;
+  padding-right: 20px;
+}
+
+.modal input {
+  width: 100%;
+  height: 52px;
+  margin: 0 0 30px 0;
+  padding: 0 23px 0 23px;
+
+  @include font_ptmono(16px, 22px, 400, $basic_light);
+
+  &::placeholder {
+    @include font_ptmono(16px, 22px, 400, $basic_light);
+  }
+}
+
+.modal textarea {
+  width: 100%;
+  min-height: 104px;
+  margin-bottom: 30px;
+  padding: 12px 25px 12px 25px;
+
+  @include font_ptmono(16px, 22px, 400, $basic_light);
+
+  &::placeholder {
+    @include font_ptmono(16px, 22px, 400, $basic_light);
+  }
+}
+
+.modal .form-wrapper__subtitle {
+  display: none;
+
+  @include font_ptmono(16px, 22px, 400, $basic_light);
+}
+
+.modal .modal__subtitle {
+  display: block;
+}
+
+.modal .form-agreement__text {
+  margin-left: 32px;
+
+  opacity: 0.8;
+
+  @include font_ptmono(14px, 16px, 400, $basic_light);
+}
+
+.modal .callback-form__btn-text {
+  display: none;
+}
+
+.modal__btn-text {
+  display: none;
+}
+
+.modal .modal__btn-text {
+  display: block;
+}
+
+.modal button[type="submit"] {
+  width: 100%;
+  min-height: 47px;
+  margin-bottom: 29px;
+}
+
+
+.modal__close {
+  position: absolute;
+  top: 19px;
+  right: 14px;
+
+  display: none;
+  min-width: 20px;
+  min-height: 20px;
+
+  background-color: transparent;
+  border: none;
+
+  & svg {
+    width: 17px;
+    height: 17px;
+
+    fill: $basic_light;
+  }
+}
+
+.modal .modal__close {
+  display: inline-block;
+}

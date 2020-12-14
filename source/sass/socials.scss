@@ -1,10 +1,9 @@
 .socials {
   width: 336px;
 
-  @media (max-width: $desktop_additional_breakpoint) {
+  @media (max-width: $desktop_footer_breakpoint) {
     width: 220px;
   }
-
 
   @media (max-width: $desktop_breakpoint) {
     display: flex;

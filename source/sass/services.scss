@@ -1,0 +1,107 @@
+.services {
+  background-color: $basic_dark;
+
+  // @media (max-width: $desktop_breakpoint) {
+  //   //
+  // }
+
+  // @media (max-width: $tablet_breakpoint) {
+  //   //
+  // }
+}
+
+.services__wrapper {
+  min-width: 290px;
+  max-width: $desktop_cards_max_width;
+  margin: 0 auto;
+  padding: 85px 0 95px;
+
+  @media (max-width: $desktop_breakpoint) {
+    width: 720px;
+    padding: 50px 0 57px;
+  }
+
+  @media (max-width: $tablet_breakpoint) {
+    width: 100%;
+    min-width: 290px;
+    padding: 50px 0 50px;
+  }
+}
+
+.services h2 {
+  margin: 0 0 22px 0;
+  padding: 0 15px 0 15px;
+
+  @include font_robotcon(36px, 51px, 400, $basic_light);
+
+  @media (max-width: $desktop_breakpoint) {
+    margin: 0 0 25px 0;
+    padding: 0 0 0 0;
+
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  @media (max-width: $tablet_breakpoint) {
+    margin: 0 0 27px 0;
+    padding: 0 20px 0 25px;
+
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
+
+.services__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+
+  list-style: none;
+
+  @media (max-width: $desktop_breakpoint) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  @media (max-width: $tablet_breakpoint) {
+    //
+  }
+}
+
+.services__item {
+  //
+
+
+  // @media (max-width: $desktop_breakpoint) {
+  //   //
+  // }
+
+  // @media (max-width: $tablet_breakpoint) {
+  //   //
+  // }
+}
+
+.services__link {
+  //
+}
+
+
+.services a[href] {
+  outline-offset: $outline_shift;
+
+  &:hover {
+    outline: $underline_height solid $basic_skyblue;
+  }
+
+  &:focus {
+    outline: $underline_height solid $basic_skyblue;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}

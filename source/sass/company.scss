@@ -1,0 +1,127 @@
+.company {
+  // @media (max-width: $desktop_breakpoint) {
+  //   //
+  // }
+
+  // @media (max-width: $tablet_breakpoint) {
+  //   //
+  // }
+}
+
+.company__wrapper {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  width: calc(38.7% * 2 + 30px);
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 40px 0 89px 180px;
+
+
+  @media (max-width: $desktop_breakpoint) {
+    width: calc(44.7% * 2 + 30px);
+    padding: 0 0 63px 184px;
+  }
+
+  @media (max-width: $tablet_breakpoint) {
+    justify-content: center;
+    width: 100%;
+    padding: 17px 0 45px 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -78.2%;
+    right: -26.5%;
+
+    width: 260px;
+    height: 224px;
+
+    background-image: url("../img/promo_back_triangle_small.svg");
+    transform: rotate(-30deg);
+
+    @media (max-width: $desktop_breakpoint) {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 30.6%;
+    left: -50.9%;
+    z-index: -1;
+
+    width: 560px;
+    height: 486px;
+
+    background-image: url("../img/promo_back_triangle_big.svg");
+    transform: rotate(90deg);
+
+
+    @media (max-width: $desktop_breakpoint) {
+      display: none;
+    }
+  }
+}
+
+
+.company a {
+  align-self: flex-start;
+  margin: 0 0 20px 0;
+  margin-left: 2px;
+
+  color: $basic_skyblue;
+
+  border-color: $basic_skyblue;
+
+  // @media (max-width: $desktop_breakpoint) {
+  //   //
+  // }
+
+  // @media (max-width: $tablet_breakpoint) {
+  //   //
+  // }
+}
+
+.company img {
+  position: absolute;
+  top: 94px;
+  left: -78px;
+
+  width: 317px;
+  height: 220px;
+
+  transform: rotate(-90deg);
+
+  @media (max-width: $desktop_breakpoint) {
+    top: 52px;
+    left: -89px;
+
+    width: 362px;
+    height: 252px;
+  }
+
+  @media (max-width: $tablet_breakpoint) {
+    display: none;
+  }
+}
+
+
+.company a[href] {
+  outline-offset: $outline_shift;
+
+  &:hover {
+    outline: $underline_height solid $basic_skyblue;
+  }
+
+  &:focus {
+    outline: $underline_height solid $basic_skyblue;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}

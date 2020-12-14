@@ -1,0 +1,70 @@
+.company-text {
+  display: flex;
+  flex-direction: column;
+  order: 1;
+  margin: 0 0 0 0;
+  padding: 0 20px 0 0;
+
+  @media (max-width: $desktop_breakpoint) {
+    padding: 0 0 0 0;
+  }
+
+  @media (max-width: $tablet_breakpoint) {
+    width: 91.6%;
+    max-width: 570px;
+  }
+}
+
+.company-text__wrapper {
+  position: relative;
+
+  margin-bottom: 17px;
+
+
+  @media (max-width: $desktop_breakpoint) {
+    max-height: 195px;
+    margin-bottom: 43px;
+    padding-left: 3px;
+    overflow: hidden;
+  }
+
+  @media (max-width: $tablet_breakpoint) {
+    max-width: 100%;
+    max-height: 346px;
+    margin-bottom: 31px;
+  }
+}
+
+.company-text h2 {
+  margin: 0 0 21px;
+
+  @include font_robotcon(36px, 51px, 400, $font_darkgray);
+
+  @media (max-width: $desktop_breakpoint) {
+    margin: 0 0 23px 0;
+
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  @media (max-width: $tablet_breakpoint) {
+    margin: 0 0 20px 0;
+
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
+.company-text p {
+  margin: 0 0 21px 0;
+
+  @include font_ptmono(16px, 22px, 400, $font_darkgray);
+
+  @media (max-width: $desktop_breakpoint) {
+    margin: 0 0 20px 0;
+  }
+
+  @media (max-width: $tablet_breakpoint) {
+    margin: 0 0 41px 0;
+  }
+}
