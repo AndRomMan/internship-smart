@@ -11,13 +11,11 @@
 
   function linkToCallbackClickHandler(evt) {
     evt.preventDefault();
-    // console.log(evt.type);
     callbackAnchor.scrollIntoView({block: 'start', behavior: 'smooth'});
   }
 
   function linkToAdvantagesClickHandler(evt) {
     evt.preventDefault();
-    // console.log(evt.type);
     advantagesAnchor.scrollIntoView({block: 'start', behavior: 'smooth'});
   }
 

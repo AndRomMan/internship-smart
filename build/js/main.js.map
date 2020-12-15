@@ -1,1 +1,1 @@
-{"version":3,"sources":["main.js"],"names":[],"mappings":"AAGA;;AAEA,CAAC,YAAY,CAEZ,CAFD","sourcesContent":["/* eslint-disable no-undef */\n// main.js\n\n'use strict';\n\n(function () {\n  //\n})();\n"],"file":"main.js"}
+{"version":3,"sources":["main.js"],"names":[],"mappings":"AAEA;;AAEA,CAAC,YAAY,CAEZ,CAFD","sourcesContent":["// main.js\n\n'use strict';\n\n(function () {\n  // console.log('check js');\n})();\n"],"file":"main.js"}

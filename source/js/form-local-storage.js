@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 /* eslint-disable no-console */
 
 // form-local-storage.js
@@ -15,15 +14,15 @@
   const USER_PHONE_KEY = 'userphone';
   const USER_QUESTION_KEY = 'userquestion';
 
-  let userData = {
-    name: '',
-    phone: '',
-    question: '',
-  };
+  // let userData = {
+  //   name: '',
+  //   phone: '',
+  //   question: '',
+  // };
 
-  let userName = '';
-  let userPhone = '';
-  let userQuestion = '';
+  // let userName = '';
+  // let userPhone = '';
+  // let userQuestion = '';
 
   function storageAvailable(type) {
     try {
@@ -43,7 +42,6 @@
     // console.log(userData);
 
     if (storageAvailable('localStorage')) {
-      console.log('We can use Local Storage');
       let name = localStorage.getItem(USER_NAME_KEY);
       console.log(name);
 
@@ -55,7 +53,7 @@
 
       console.log(`localStorage.length = ${localStorage.length}`);
     } else {
-      console.log('We can not use Local  Storage');
+      console.log('We can not use Local Storage');
     }
   }
 
@@ -64,21 +62,21 @@
   }
 
   function inputUserNameBlurHandler() {
-    userData.name = inputUserName.value;
-    userName = inputUserName.value;
-    localStorage.setItem(USER_NAME_KEY, userName);
+    // userData.name = inputUserName.value;
+    // userName = inputUserName.value;
+    localStorage.setItem(USER_NAME_KEY, inputUserName.value);
   }
 
   function inputUserphoneBlurHandler() {
-    userData.phone = inputUserphone.value;
-    userPhone = inputUserphone.value;
-    localStorage.setItem(USER_PHONE_KEY, userPhone);
+    // userData.phone = inputUserphone.value;
+    // userPhone = inputUserphone.value;
+    localStorage.setItem(USER_PHONE_KEY, inputUserphone.value);
   }
 
   function inputQuestionBlurHandler() {
-    userData.question = inputQuestion.value;
-    userQuestion = inputQuestion.value;
-    localStorage.setItem(USER_QUESTION_KEY, userQuestion);
+    // userData.question = inputQuestion.value;
+    // userQuestion = inputQuestion.value;
+    localStorage.setItem(USER_QUESTION_KEY, inputQuestion.value);
   }
 
   if (inputUserName) {

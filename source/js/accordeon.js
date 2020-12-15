@@ -92,6 +92,7 @@
     if (accordeonNavToggle) {
       accordeonNavToggle.addEventListener('click', toggleNavClickHandler);
     }
+
     if (accordeonContactsToggle) {
       accordeonContactsToggle.addEventListener('click', toggleClassListClickHandler);
     }

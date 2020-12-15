@@ -8,14 +8,6 @@
   var USER_NAME_KEY = 'username';
   var USER_PHONE_KEY = 'userphone';
   var USER_QUESTION_KEY = 'userquestion';
-  var userData = {
-    name: '',
-    phone: '',
-    question: ''
-  };
-  var userName = '';
-  var userPhone = '';
-  var userQuestion = '';
 
   function storageAvailable(type) {
     try {
@@ -34,7 +26,6 @@
     console.log("localStorage.length = ".concat(localStorage.length));
 
     if (storageAvailable('localStorage')) {
-      console.log('We can use Local Storage');
       var name = localStorage.getItem(USER_NAME_KEY);
       console.log(name);
       var phone = localStorage.getItem(USER_PHONE_KEY);
@@ -43,7 +34,7 @@
       console.log(question);
       console.log("localStorage.length = ".concat(localStorage.length));
     } else {
-      console.log('We can not use Local  Storage');
+      console.log('We can not use Local Storage');
     }
   }
 
@@ -52,21 +43,15 @@
   }
 
   function inputUserNameBlurHandler() {
-    userData.name = inputUserName.value;
-    userName = inputUserName.value;
-    localStorage.setItem(USER_NAME_KEY, userName);
+    localStorage.setItem(USER_NAME_KEY, inputUserName.value);
   }
 
   function inputUserphoneBlurHandler() {
-    userData.phone = inputUserphone.value;
-    userPhone = inputUserphone.value;
-    localStorage.setItem(USER_PHONE_KEY, userPhone);
+    localStorage.setItem(USER_PHONE_KEY, inputUserphone.value);
   }
 
   function inputQuestionBlurHandler() {
-    userData.question = inputQuestion.value;
-    userQuestion = inputQuestion.value;
-    localStorage.setItem(USER_QUESTION_KEY, userQuestion);
+    localStorage.setItem(USER_QUESTION_KEY, inputQuestion.value);
   }
 
   if (inputUserName) {

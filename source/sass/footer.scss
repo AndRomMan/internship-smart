@@ -98,21 +98,28 @@
 }
 
 .socials-list__link {
-  &::after {
-    display: none;
-  }
+  // &::after {
+  //   display: none;
+  // }
 
   &:hover {
     & .socials__icon {
-      outline: $underline_height solid $basic_skyblue;
-      outline-offset: $outline_shift;
+      // outline: $underline_height solid $basic_skyblue;
+      // outline-offset: 0;
+      &::after {
+        @include underline;
+      }
     }
   }
 
   &:focus {
     & .socials__icon {
-      outline: $underline_height solid $basic_skyblue;
-      outline-offset: $outline_shift;
+      // outline: $underline_height solid $basic_skyblue;
+      // outline-offset: 0;
+
+      &::after {
+        @include underline;
+      }
     }
   }
 

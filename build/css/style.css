@@ -1029,21 +1029,24 @@ textarea {
   font-family: "PT Mono", "Courier New", "Lucida Console", "Monaco", monospace;
   color: #ffffff; }
   .callback-form input::-moz-placeholder {
+    opacity: 1;
     font-size: 16px;
     font-weight: 400;
-    line-height: 22px;
+    line-height: 51px;
     font-family: "PT Mono", "Courier New", "Lucida Console", "Monaco", monospace;
     color: #ffffff; }
   .callback-form input:-ms-input-placeholder {
+    opacity: 1;
     font-size: 16px;
     font-weight: 400;
-    line-height: 22px;
+    line-height: 51px;
     font-family: "PT Mono", "Courier New", "Lucida Console", "Monaco", monospace;
     color: #ffffff; }
   .callback-form input::placeholder {
+    opacity: 1;
     font-size: 16px;
     font-weight: 400;
-    line-height: 22px;
+    line-height: 51px;
     font-family: "PT Mono", "Courier New", "Lucida Console", "Monaco", monospace;
     color: #ffffff; }
   @media (max-width: 1023px) {
@@ -1076,18 +1079,21 @@ textarea {
   font-family: "PT Mono", "Courier New", "Lucida Console", "Monaco", monospace;
   color: #ffffff; }
   .callback-form textarea::-moz-placeholder {
+    opacity: 1;
     font-size: 16px;
     font-weight: 400;
     line-height: 22px;
     font-family: "PT Mono", "Courier New", "Lucida Console", "Monaco", monospace;
     color: #ffffff; }
   .callback-form textarea:-ms-input-placeholder {
+    opacity: 1;
     font-size: 16px;
     font-weight: 400;
     line-height: 22px;
     font-family: "PT Mono", "Courier New", "Lucida Console", "Monaco", monospace;
     color: #ffffff; }
   .callback-form textarea::placeholder {
+    opacity: 1;
     font-size: 16px;
     font-weight: 400;
     line-height: 22px;
@@ -1320,16 +1326,31 @@ label[for="useragreement"] {
   .footer button:active {
     opacity: 0.7; }
 
-.socials-list__link::after {
-  display: none; }
+.socials-list__link:hover .socials__icon::after {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #00b2ff;
+  opacity: 1; }
+  @media (max-width: 767px) {
+    .socials-list__link:hover .socials__icon::after {
+      top: 18px; } }
 
-.socials-list__link:hover .socials__icon {
-  outline: 3px solid #00b2ff;
-  outline-offset: 5px; }
-
-.socials-list__link:focus .socials__icon {
-  outline: 3px solid #00b2ff;
-  outline-offset: 5px; }
+.socials-list__link:focus .socials__icon::after {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #00b2ff;
+  opacity: 1; }
+  @media (max-width: 767px) {
+    .socials-list__link:focus .socials__icon::after {
+      top: 18px; } }
 
 .socials-list__link:active {
   opacity: 0.7; }
@@ -1662,61 +1683,14 @@ label[for="useragreement"] {
 
 .modal input {
   width: 100%;
-  height: 52px;
   margin: 0 0 30px 0;
-  padding: 0 23px 0 23px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
-  font-family: "PT Mono", "Courier New", "Lucida Console", "Monaco", monospace;
-  color: #ffffff; }
-  .modal input::-moz-placeholder {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 22px;
-    font-family: "PT Mono", "Courier New", "Lucida Console", "Monaco", monospace;
-    color: #ffffff; }
-  .modal input:-ms-input-placeholder {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 22px;
-    font-family: "PT Mono", "Courier New", "Lucida Console", "Monaco", monospace;
-    color: #ffffff; }
-  .modal input::placeholder {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 22px;
-    font-family: "PT Mono", "Courier New", "Lucida Console", "Monaco", monospace;
-    color: #ffffff; }
+  padding: 0 23px 0 23px; }
 
 .modal textarea {
   width: 100%;
   min-height: 104px;
   margin-bottom: 30px;
-  padding: 12px 25px 12px 25px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
-  font-family: "PT Mono", "Courier New", "Lucida Console", "Monaco", monospace;
-  color: #ffffff; }
-  .modal textarea::-moz-placeholder {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 22px;
-    font-family: "PT Mono", "Courier New", "Lucida Console", "Monaco", monospace;
-    color: #ffffff; }
-  .modal textarea:-ms-input-placeholder {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 22px;
-    font-family: "PT Mono", "Courier New", "Lucida Console", "Monaco", monospace;
-    color: #ffffff; }
-  .modal textarea::placeholder {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 22px;
-    font-family: "PT Mono", "Courier New", "Lucida Console", "Monaco", monospace;
-    color: #ffffff; }
+  padding: 12px 25px 12px 25px; }
 
 .modal button[type="submit"] {
   width: 100%;
