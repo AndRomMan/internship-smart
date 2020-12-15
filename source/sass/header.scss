@@ -65,6 +65,11 @@
   margin-right: auto;
 }
 
+// .header__link {
+//   position: relative;
+//   z-index: 1;
+// }
+
 .header__logo img {
   width: 202px;
   height: 52px;
@@ -92,10 +97,6 @@
   }
 }
 
-.header__link {
-  position: relative;
-  z-index: 1;
-}
 
 .header a[href] {
   outline-offset: $outline_shift;

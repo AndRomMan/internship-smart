@@ -6,14 +6,6 @@
   height: 620px;
   margin: 30px 15px;
 
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // width: 400px;
-  // height: 800px;
-  // padding: 30px 15px 15px 30px;
-
-
   @media (max-width: $desktop_breakpoint) {
     width: 720px;
     height: 256px;
@@ -48,8 +40,6 @@
   }
 }
 
-
-// .services-link__img img {
 .services-link img {
   width: 370px;
   height: 620px;
@@ -64,7 +54,6 @@
     height: 256px;
   }
 }
-
 
 .services-link__icon {
   position: absolute;

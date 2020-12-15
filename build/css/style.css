@@ -193,10 +193,6 @@ textarea {
     .header__btn {
       display: none; } }
 
-.header__link {
-  position: relative;
-  z-index: 1; }
-
 .header a[href] {
   outline-offset: 5px; }
   .header a[href]:hover {
