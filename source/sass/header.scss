@@ -99,6 +99,8 @@
 
 
 .header a[href] {
+  z-index: 2;
+
   outline-offset: $outline_shift;
 
   &:hover {

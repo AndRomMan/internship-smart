@@ -34,20 +34,6 @@ a {
 @font-face {
   font-style: normal;
   font-weight: 400;
-  font-family: "Roboto";
-  font-display: swap;
-  src: local("Roboto"), url("../fonts/roboto-v20-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/roboto-v20-latin_cyrillic-regular.woff") format("woff"); }
-
-@font-face {
-  font-style: normal;
-  font-weight: 500;
-  font-family: "Roboto";
-  font-display: swap;
-  src: local("Roboto"), url("../fonts/roboto-v20-latin_cyrillic-500.woff2") format("woff2"), url("../fonts/roboto-v20-latin_cyrillic-500.woff") format("woff"); }
-
-@font-face {
-  font-style: normal;
-  font-weight: 400;
   font-family: "PT Mono";
   font-display: swap;
   src: local("PT Mono"), local("PT-Mono"), url("../fonts/pt-mono-v8-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/pt-mono-v8-latin_cyrillic-regular.woff") format("woff"); }
@@ -194,6 +180,7 @@ textarea {
       display: none; } }
 
 .header a[href] {
+  z-index: 2;
   outline-offset: 5px; }
   .header a[href]:hover {
     outline: 3px solid #ffffff; }

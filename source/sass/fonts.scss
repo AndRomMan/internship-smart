@@ -20,24 +20,6 @@
   src: local("Roboto Condensed"), local("Roboto-Condensed"), url("../fonts/roboto-condensed-v19-latin_cyrillic-700.woff2") format("woff2"), url("../fonts/roboto-condensed-v19-latin_cyrillic-700.woff") format("woff");
 }
 
-@font-face {
-  font-style: normal;
-  font-weight: 400;
-  font-family: "Roboto";
-
-  font-display: swap;
-  src: local("Roboto"), url("../fonts/roboto-v20-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/roboto-v20-latin_cyrillic-regular.woff") format("woff");
-}
-
-@font-face {
-  font-style: normal;
-  font-weight: 500;
-  font-family: "Roboto";
-
-  font-display: swap;
-  src: local("Roboto"), url("../fonts/roboto-v20-latin_cyrillic-500.woff2") format("woff2"), url("../fonts/roboto-v20-latin_cyrillic-500.woff") format("woff");
-}
-
 
 @font-face {
   font-style: normal;
@@ -59,15 +41,6 @@
   color: $color;
 }
 
-@mixin font_robot($size, $line_height, $weight, $color) {
-  font: {
-    size: $size;
-    weight: $weight;
-  };
-  line-height: $line_height;
-  font-family: "Roboto", "Arial", "Helvetica", sans-serif;
-  color: $color;
-}
 
 @mixin font_ptmono($size, $line_height, $weight, $color) {
   font: {
