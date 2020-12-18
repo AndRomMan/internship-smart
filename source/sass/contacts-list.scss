@@ -20,3 +20,9 @@
 
   @include font_ptmono(15px, 25px, 400, $basic_dark);
 }
+
+.contacts-list p {
+  opacity: 0.5;
+
+  @include font_ptmono(15px, 25px, 400, $basic_dark);
+}

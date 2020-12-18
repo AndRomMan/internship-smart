@@ -20,6 +20,7 @@
 // 2) добавлено сжатие pngQuant
 // 3) после тестирования отключено сжатие png в compressJpgPng
 // 4) добавлен babel
+// 5) добавлен gulp-concat
 
 'use strict';
 // подключаем Gulp
@@ -35,6 +36,7 @@ const del = require('del');
 // вспомогательные плагины
 const plumber = require('gulp-plumber');
 const sourcemap = require('gulp-sourcemaps');
+const concat = require('gulp-concat');
 
 // ========== javascript producing module ==========
 // const terser = require('gulp-terser');

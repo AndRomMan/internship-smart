@@ -65,10 +65,12 @@
   margin-right: auto;
 }
 
-// .header__link {
-//   position: relative;
-//   z-index: 1;
-// }
+.header__link-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 55%;
+}
 
 .header__logo img {
   width: 202px;

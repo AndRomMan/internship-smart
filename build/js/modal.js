@@ -21,16 +21,25 @@
   var MODAL_OVERLAY = 'callback';
   var MODAL_WIN = 'modal';
   var BODY_OVERFLOW = 'body--overflow';
+  var OUT_OF_TAB = 'advantages-link';
 
   function setTabindex(elements, index) {
     elements.forEach(function (activeElement) {
-      activeElement.setAttribute('tabindex', '' + index);
+      if (activeElement.classList.contains(OUT_OF_TAB)) {
+        return;
+      } else {
+        activeElement.setAttribute('tabindex', '' + index);
+      }
     });
   }
 
   function removeTabindex(elements) {
     elements.forEach(function (activeElement) {
-      activeElement.removeAttribute('tabindex');
+      if (activeElement.classList.contains(OUT_OF_TAB)) {
+        return;
+      } else {
+        activeElement.removeAttribute('tabindex');
+      }
     });
   }
 

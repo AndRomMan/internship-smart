@@ -24,16 +24,25 @@
   const MODAL_OVERLAY = 'callback';
   const MODAL_WIN = 'modal';
   const BODY_OVERFLOW = 'body--overflow';
+  const OUT_OF_TAB = 'advantages-link';
 
   function setTabindex(elements, index) {
     elements.forEach(function (activeElement) {
-      activeElement.setAttribute('tabindex', '' + index);
+      if (activeElement.classList.contains(OUT_OF_TAB)) {
+        return;
+      } else {
+        activeElement.setAttribute('tabindex', '' + index);
+      }
     });
   }
 
   function removeTabindex(elements) {
     elements.forEach(function (activeElement) {
-      activeElement.removeAttribute('tabindex');
+      if (activeElement.classList.contains(OUT_OF_TAB)) {
+        return;
+      } else {
+        activeElement.removeAttribute('tabindex');
+      }
     });
   }
 

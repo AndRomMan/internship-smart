@@ -13,6 +13,9 @@
   let accordeonNavToggle = document.querySelector('.accordeon-toggle--nav');
   let accordeonContactsToggle = document.querySelector('.accordeon-toggle--contacts');
 
+  let accordeonNavToggleBig = document.querySelector('.accordeon--navigation');
+  let accordeonContactsToggleBig = document.querySelector('.accordeon--contacts');
+
   let accordeonNavToggleIconOpen;
   let accordeonNavToggleIconClose;
   let accordeonContactsToggleIconOpen;
@@ -89,12 +92,12 @@
   }
 
   function activateToggleClickListener() {
-    if (accordeonNavToggle) {
-      accordeonNavToggle.addEventListener('click', toggleNavClickHandler);
+    if (accordeonNavToggleBig) {
+      accordeonNavToggleBig.addEventListener('click', toggleNavClickHandler);
     }
 
-    if (accordeonContactsToggle) {
-      accordeonContactsToggle.addEventListener('click', toggleClassListClickHandler);
+    if (accordeonContactsToggleBig) {
+      accordeonContactsToggleBig.addEventListener('click', toggleClassListClickHandler);
     }
   }
 

@@ -6,6 +6,8 @@
   min-height: 299px;
   padding: 95px 40px 25px 43px;
 
+  vertical-align: top;
+
   background-color: $body_back;
   border: 1px solid $advantage_border;
   border-left: 3px solid $basic_skyblue;
@@ -19,11 +21,11 @@
     padding: 72px 10px 13px 25px;
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: $basic_skyblue;
     border-color: $basic_skyblue;
     outline: none;
+    cursor: auto;
 
     & h3 {
       color: $basic_light;

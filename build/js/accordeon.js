@@ -9,6 +9,8 @@
   var ACCORDEON_TOGGLE_ON = 'accordeon-toggle--js';
   var accordeonNavToggle = document.querySelector('.accordeon-toggle--nav');
   var accordeonContactsToggle = document.querySelector('.accordeon-toggle--contacts');
+  var accordeonNavToggleBig = document.querySelector('.accordeon--navigation');
+  var accordeonContactsToggleBig = document.querySelector('.accordeon--contacts');
   var accordeonNavToggleIconOpen;
   var accordeonNavToggleIconClose;
   var accordeonContactsToggleIconOpen;
@@ -75,12 +77,12 @@
   }
 
   function activateToggleClickListener() {
-    if (accordeonNavToggle) {
-      accordeonNavToggle.addEventListener('click', toggleNavClickHandler);
+    if (accordeonNavToggleBig) {
+      accordeonNavToggleBig.addEventListener('click', toggleNavClickHandler);
     }
 
-    if (accordeonContactsToggle) {
-      accordeonContactsToggle.addEventListener('click', toggleClassListClickHandler);
+    if (accordeonContactsToggleBig) {
+      accordeonContactsToggleBig.addEventListener('click', toggleClassListClickHandler);
     }
   }
 

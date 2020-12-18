@@ -18,6 +18,7 @@
     "gulp": "^4.0.x",
     "gulp-autoprefixer": "^7.0.x",
     "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
     "gulp-csso": "^4.0.x",
     "gulp-file-include": "^2.2.x",
     "gulp-imagemin": "^7.1.x",
