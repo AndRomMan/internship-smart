@@ -22,3 +22,17 @@
 .nav__list {
   //
 }
+
+.nav__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (max-width: $desktop_breakpoint) {
+    flex-direction: column;
+  }
+
+  @media (max-width: $tablet_breakpoint) {
+    padding-top: 27px;
+  }
+}

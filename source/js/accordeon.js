@@ -2,7 +2,8 @@
 'use strict';
 
 (function () {
-  let navList = document.querySelector('.nav-list');
+  // let navList = document.querySelector('.nav-list');
+  let navList = document.querySelector('.nav__wrapper');
   let contactsList = document.querySelector('.contacts-list');
 
   let CLOSE_NAV_LIST = 'nav-list--close';

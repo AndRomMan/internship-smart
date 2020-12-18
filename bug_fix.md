@@ -70,7 +70,6 @@ A source element that has a following sibling source element or img element with
 ```
 #### На адресе ссылка не нужна
 
-#### Вся область вкладки должна быть кликабельной
 
 #### В Safari обрезаны placeholder
 
@@ -80,5 +79,8 @@ A source element that has a following sibling source element or img element with
 #### файлы js должны объединяться
 #### При использовании блочно-строчных элементов (display: inline-block) явно указано вертикальное выравнивание (vertical-align)
 
-#### форма не отправляется
 #### переполнение nav-list некорректно отрабатывается - появляется scrollbar
+
+#### Вся область вкладки должна быть кликабельной
+
+#### сделать обработчик формы: валидация, сохранение в localStorage, отправка данных на сервер

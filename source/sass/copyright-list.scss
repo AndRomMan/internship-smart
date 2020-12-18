@@ -1,37 +1,45 @@
 .copyright-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   margin: 0;
   padding: 14px 0 14px 0;
 
   list-style: none;
 
   @media (max-width: $desktop_breakpoint) {
-    padding: 21px 0 24px 0;
+    padding: 22px 0 22px 0;
   }
 
   @media (max-width: $tablet_breakpoint) {
     flex-direction: column;
-    padding: 8px 0 7px 0;
+    align-items: center;
+    padding: 28px 0 6px;
   }
 }
 
 .copyright-list__item {
-  display: flex;
-  justify-content: center;
-  width: 33.333%;
-
   @media (max-width: $desktop_breakpoint) {
-    justify-content: flex-start;
-    width: 50%;
+    //
   }
 
   @media (max-width: $tablet_breakpoint) {
-    justify-content: center;
-    width: auto;
-    margin-bottom: 20px;
-    // max-width: 100%;
+    &:not(:first-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.copyright-list__item:not(:last-child) {
+  @media (max-width: $tablet_breakpoint) {
+    //
+  }
+}
+
+.copyright-list__item:last-child {
+  margin-left: auto;
+
+  @media (max-width: $tablet_breakpoint) {
+    margin: 0 0 20px 0;
   }
 }
 
@@ -41,56 +49,54 @@
   }
 
   @media (max-width: $tablet_breakpoint) {
-    width: auto;
+    //
   }
 }
 
-.copyright-list__item:first-child {
-  justify-content: flex-start;
-
-  @media (max-width: $tablet_breakpoint) {
-    justify-content: center;
-  }
-}
-
-.copyright-list__item:last-child {
-  justify-content: flex-end;
-
-  @media (max-width: $tablet_breakpoint) {
-    justify-content: center;
-  }
-}
 
 .copyright-list__link {
   //
 }
 
+.copyright-list__link--desktop {
+  margin-right: 65px;
 
-.copyright-list__link--absolute {
-  margin: 0 0 0 73px;
-
-  @media (max-width: $desktop_breakpoint) {
-    position: absolute;
-    top: 126px;
-    left: 57.9%;
-
-    width: 235px;
-    margin: 0;
-
-    transform: translateX(-50%);
+  @media (max-width: $desktop_footer_breakpoint) {
+    margin-right: 30px;
   }
 
-  @media (max-width: $tablet_breakpoint) {
-    // position: static;
-    top: 191px;
-    left: 50%;
+  @media (max-width: $desktop_breakpoint) {
+    display: none;
+    margin: 0;
 
-    transform: translateX(-50%);
+    @media (max-width: $tablet_breakpoint) {
+      //
+    }
   }
 }
 
-.copyright-list__link--desktop {
+.copyright-list__link--absolute {
+  margin-right: 143px;
+
+  @media (max-width: $desktop_footer_breakpoint) {
+    margin-right: 70px;
+  }
+
   @media (max-width: $desktop_breakpoint) {
-    display: none;
+    position: absolute;
+    top: 36px;
+    left: 42.6%;
+
+    margin: 0;
+
+
+    @media (max-width: $tablet_breakpoint) {
+      top: 124px;
+      left: 0;
+
+      width: 100%;
+
+      text-align: center;
+    }
   }
 }

@@ -21,6 +21,7 @@
 // 3) после тестирования отключено сжатие png в compressJpgPng
 // 4) добавлен babel
 // 5) добавлен gulp-concat
+// 6) файлы js объединяются в main.js
 
 'use strict';
 // подключаем Gulp
@@ -171,6 +172,7 @@ function getJS() {
       // })
       // )
       // .pipe(rename({suffix: '.min'}))
+      .pipe(concat('main.js'))
       .pipe(sourcemap.write('.'))
       .pipe(dest(path.script.build))
       .pipe(browsersync.stream())
@@ -185,7 +187,7 @@ function getCSS() {
       .pipe(sourcemap.init())
       .pipe(sass())
       // будем использовать gulp-autoprefixer,
-      //  поскольку возникли проблемы с совместимостью
+      // поскольку возникли проблемы с совместимостью
       // после полного обновления post-css
       .pipe(autoprefixer())
       .pipe(dest(path.style.build))

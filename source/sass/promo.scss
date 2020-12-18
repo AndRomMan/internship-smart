@@ -16,7 +16,7 @@
   padding: 139px 0 104px 0;
 
   @media (max-width: $desktop_breakpoint) {
-    padding: 28px 0 100px 0;
+    padding: 28px 0 101px 0;
   }
 
   @media (max-width: $tablet_breakpoint) {
@@ -97,6 +97,8 @@
   @include font_robotcon(80px, 94px, 700, $basic_light);
 
   @media (max-width: $desktop_breakpoint) {
+    margin: 0 0 28px 0;
+
     font-size: 60px;
     line-height: 70px;
   }
@@ -116,7 +118,7 @@
   @include font_ptmono(22px, 34px, 400, $basic_light);
 
   @media (max-width: $desktop_breakpoint) {
-    margin: 0 0 57px 51px;
+    margin: 0 0 56px 51px;
 
     font-size: 18px;
     line-height: 28px;
@@ -146,9 +148,9 @@
       width: 33px;
     }
 
-    // @media (max-width: $tablet_breakpoint) {
-    //
-    // }
+    @media (max-width: $tablet_breakpoint) {
+      top: 15px;
+    }
   }
 }
 

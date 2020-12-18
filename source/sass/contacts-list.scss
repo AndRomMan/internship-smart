@@ -22,6 +22,8 @@
 }
 
 .contacts-list p {
+  margin: 0;
+
   opacity: 0.5;
 
   @include font_ptmono(15px, 25px, 400, $basic_dark);

@@ -4,7 +4,8 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: flex-start;
-  max-height: 120px;
+  // max-height: 120px;
+  width: 46%;
   margin: 0;
   padding: 0;
   overflow: auto;
@@ -12,11 +13,11 @@
   list-style: none;
 
   @media (max-width: $desktop_breakpoint) {
-    max-height: none;
+    width: 100%;
   }
 
   @media (max-width: $tablet_breakpoint) {
-    padding-top: 27px;
+    //
   }
 }
 
@@ -28,7 +29,7 @@
 
 .nav-list__item {
   max-width: 240px;
-  margin: 0 75px 0 0;
+
 
   @media (max-width: $desktop_footer_breakpoint) {
     margin: 0 50px 0 0;
