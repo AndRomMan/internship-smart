@@ -129,10 +129,6 @@
     }
   }
 
-  if (submitFormBtn) {
-    submitFormBtn.addEventListener('click', submitFormBtnClickHandler);
-  }
-
   function inputUserNameBlurHandler() {
     localStorage.setItem(USER_NAME_KEY, inputUserName.value);
   }
@@ -156,6 +152,8 @@
   if (inputQuestion) {
     inputQuestion.addEventListener('blur', inputQuestionBlurHandler);
   }
+
+  if (submitFormBtn) {}
 })();
 'use strict';
 

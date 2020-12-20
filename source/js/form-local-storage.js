@@ -39,7 +39,6 @@
   function submitFormBtnClickHandler(evt) {
     evt.preventDefault();
     console.log(`localStorage.length = ${localStorage.length}`);
-    // console.log(userData);
 
     if (storageAvailable('localStorage')) {
       let name = localStorage.getItem(USER_NAME_KEY);
@@ -55,10 +54,6 @@
     } else {
       console.log('We can not use Local Storage');
     }
-  }
-
-  if (submitFormBtn) {
-    submitFormBtn.addEventListener('click', submitFormBtnClickHandler);
   }
 
   function inputUserNameBlurHandler() {
@@ -89,5 +84,9 @@
 
   if (inputQuestion) {
     inputQuestion.addEventListener('blur', inputQuestionBlurHandler);
+  }
+
+  if (submitFormBtn) {
+    // submitFormBtn.addEventListener('click', submitFormBtnClickHandler);
   }
 })();
