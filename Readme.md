@@ -7,7 +7,7 @@ ___[Акселератор HTML Academy](https://l.htmlacademy.ru/graduates#rec1
 Все проекты реализуются в соответствии с [критериями качества](https://www.notion.so/45f0ecab9aa048f7884f0df47948fdae).
 
 ---
-* Разработчик: [Роман Демин](https://up.htmlacademy.ru/adaptive/18/user/219593)
+* Разработчик: [Роман Демин](https://htmlacademy.ru/profile/id219593)
 
 ___
 * Куратор проектов Акселератора: __Софья Дышпан__
