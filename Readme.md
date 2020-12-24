@@ -1,13 +1,10 @@
 # Проект "Smart Device"
 
-  [Сайт в интернете](https://demindesign.ru/smart-device/)
-  [Код проекта на репозитории github](https://github.com/AndRomMan/smart-device)
+  [Сайт в интернете.](https://demindesign.ru/smart-device/)
 
 Проект создан в рамках Акселератора [HTML Academy](https://htmlacademy.ru/about).
 
 ___[Акселератор HTML Academy](https://l.htmlacademy.ru/graduates#rec177038888)___ — имитатор реальной командной работы над проектом.
-
-Все проекты реализуются в соответствии с [критериями качества](https://www.notion.so/45f0ecab9aa048f7884f0df47948fdae).
 
 ---
 * Разработчик: [Роман Демин](https://htmlacademy.ru/profile/id219593)
@@ -34,6 +31,8 @@ ___
 10. Главное меню в мобильной версии реализуется с применением __JavaScript__.
 Меню должны быть работоспособным при отключенном JavaScript.
 12. Система управления версиями: Git
+
+__Все проекты реализуются в соответствии с [критериями качества](https://www.notion.so/45f0ecab9aa048f7884f0df47948fdae).__
 
 ---
 #### Что сделано
