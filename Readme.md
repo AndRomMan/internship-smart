@@ -1,6 +1,6 @@
 # Проект "Smart Device"
 
-  [Сайт в интернете.](https://demindesign.ru/smart-device/)
+  [Сайт в интернете](https://andromman.github.io/smart-device/build/)
 
 Проект создан в рамках Акселератора [HTML Academy](https://htmlacademy.ru/about).
 
